@@ -2,81 +2,77 @@
 
 <body>
 
-<div class="wrapper" id="js-wrapper">
+	<div class="wrapper" id="js-wrapper">
 
-	{% include 'header/global/header.html' %}
-
-	<div class="middle">
-		<div class="middle__container">
-
+		{% include 'header/global/header.html' %}
+		{% include 'slider/main/slider-main.html' %}
+	
+		<div class="section">
 			<div class="content">
 				<!-- WORKAREA -->
+				{% include 'section/special-offers/special-offers.html' %}
+				<div class="new-items">
+					<span class="new-items__title">Новинки <span class="new-items__indicator"><i>57</i>новинок</span></span>
+					<!-- Slider main container -->
+					<div class="swiper-container">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">Slide 1</div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+							...
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
 
-				{% include 'breadcrumbs/breadcrumbs.html' %}
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 
-				<div class="title">{{ "fOObAr" | upper }}</div>
-
-				{% include 'checkbox/checkbox.html' %}
-				{% include 'pagination/pagination.html' %}
-
-				<div class="icon icon_ambulance"></div>
-
-				<div class="icon icon_auth"></div>
-
-				<div class="icon icon_auth2"></div>
-				<!-- /.icon icon_auth -->
-
-
-				<div class="text-default">
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique asperiores, quasi hic. Assumenda voluptatibus tenetur, praesentium officiis similique aperiam qui, odit sit nemo magni! Voluptate ipsum maiores consequatur aspernatur tenetur.
-					</p>
-
-					<table>
-						<tr>
-							<td>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
-							</td>
-							<td>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
-							</td>
-							<td>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
-							</td>
-						</tr>
-					</table>
-
-					<a href="">Link</a>
-
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-
-					и т.д.
-
+						<!-- If we need scrollbar -->
+						<div class="swiper-scrollbar"></div>
+					</div>
 				</div>
-				<!-- /.text-default -->
-
+				<div class="articles">
+					<span class="articles__title">Статьи</span>
+					<div class="articles__items">
+						<div class="articles__item">
+							<span class="articles__text"></span>
+							<span class="articles__date"></span>
+							<span class="articles__info"></span>
+						</div>
+						<div class="articles__item">
+							<span class="articles__text"></span>
+							<span class="articles__date"></span>
+							<span class="articles__info"></span>
+						</div>
+						<div class="articles__item">
+							<span class="articles__text"></span>
+							<span class="articles__date"></span>
+							<span class="articles__info"></span>
+						</div>
+						<div class="articles__item">
+							<span class="articles__text"></span>
+							<span class="articles__date"></span>
+							<span class="articles__info"></span>
+						</div>
+					</div>
+					<a href="" class="articles__link">Все Статьи</a>
+				</div>
 				<!-- END WORKAREA -->
 			</div>
 			<!-- /.content -->
-
 		</div>
-		<!-- /.middle__container -->
+		<!-- /.middle -->
+
 	</div>
-	<!-- /.middle -->
+	<!-- /.wrapper -->
 
-</div>
-<!-- /.wrapper -->
-
-{% include 'footer/global/footer.html' %}
-{% include 'connect/script.html' %}
-{% include 'connect/stylesheet.html' %}
+	{% include 'footer/global/footer.html' %}
+	{% include 'connect/script.html' %}
+	{% include 'connect/stylesheet.html' %}
 
 </body>
+
 </html>

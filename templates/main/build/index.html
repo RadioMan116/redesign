@@ -46,39 +46,64 @@
 	<div class="wrapper" id="js-wrapper">
 
 		<header class="header geometria">
-			<div class="container">
-				<div class="header__blocks">
-					<div class="header__block">
+
+			<div class="header__blocks">
+				<div class="header__block header__block_top">
+					<div class="container">
 						<div class="logo">
 							<a href="#" class="logo__link">
-								<img src="images/logo.png" alt="" class="logo__pic">
+								<img src="images/dedietrich-studio.svg" alt="" class="logo__pic">
 							</a>
 						</div>
 						<!-- /.logo -->
+						<div class="header__telephones">
+							<a href="tel:+74955653990" class="header__phone">+7 (495) 565-39-90</a>
+							<a href="tel:+74955653990" class="header__call-phone-button">Заказать звонок</a>
+						</div>
 					</div>
-					<div class="header__block header__block_wide">
+
+				</div>
+				<div class="header__block header__block_bottom">
+
+					<div class="header__border header__border_top"></div>
+					<div class="container">
 						<button class="hamburger" id="js-hamburger" aria-expanded="false">
 							<span class="hamburger__screen-reader-text">Menu</span>
 
 						</button>
+						<div class="header__img">
+							<img src="images/dit-sign.svg" alt="" class="logo__pic">
+						</div>
 						<div class="menu" id="js-menu" aria-expanded="false">
 							<nav>
 								<ul class="menu__list">
 
 									<li class="menu__item">
-										<a href="#" class="menu__link">Продукты</a>
+										<a href="#" class="menu__link">Каталог</a>
 									</li>
 
 									<li class="menu__item">
-										<a href="#" class="menu__link">Корзина</a>
+										<a href="#" class="menu__link">De Dietrich</a>
 									</li>
 
 									<li class="menu__item">
-										<a href="#" class="menu__link">Доставка</a>
+										<a href="#" class="menu__link">Доставка и оплата</a>
 									</li>
 
 									<li class="menu__item">
-										<a href="#" class="menu__link">Руководство</a>
+										<a href="#" class="menu__link">Сервис</a>
+									</li>
+
+									<li class="menu__item">
+										<a href="#" class="menu__link">Гарантия</a>
+									</li>
+
+									<li class="menu__item">
+										<a href="#" class="menu__link">Статьи</a>
+									</li>
+
+									<li class="menu__item">
+										<a href="#" class="menu__link">Помощь</a>
 									</li>
 
 									<li class="menu__item">
@@ -89,112 +114,179 @@
 							</nav>
 						</div>
 						<!--end menu-->
-
-					</div>
-					<div class="header__block header__block_mobile">
-						<div class="social">
-							<ul class="social__list">
-								<li class="social__item">
-									<a class="social__link social__link_vk" href="#">В контакте</a>
-								</li>
-								<li class="social__item">
-									<a class="social__link social__link_fb" href="#">Facebook</a>
-								</li>
-								<li class="social__item">
-									<a class="social__link social__link_youtube" href="#">Youtube</a>
-								</li>
-							</ul>
+						<div class="header__icons">
+							<div class="header__search">
+								<form action="/search/" class="header__form">
+									<input type="text" name="q" maxlength="50" class="header__input" id="js-search-header__input" style="width: 0px;">
+									<input type="submit" value="" class="header__submit">
+								</form>
+								<div class="header__search-list"></div>
+							</div>
+							<div class="header__compare">
+								<span class="header__number">0</span>
+							</div>
+							<div class="header__basket">
+								<span class="header__number">0</span>
+							</div>
 						</div>
-
 					</div>
+
+					<div class="header__border header__border_bottom"></div>
+
+
 				</div>
+
 			</div>
+
 		</header>
-
-
-		<div class="middle">
-			<div class="middle__container">
-
-				<div class="content">
-					<!-- WORKAREA -->
-
-					<div class="breadcrumbs">
-						<a href="#" class="breadcrumbs__link">Главная</a>
-						<span class="breadcrumbs__sep">/</span>
-						<span class="breadcrumbs__text">Новости23</span>
+		<div class="gallery">
+			<!-- Slider main container -->
+			<div class="swiper-container">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide">
+						<img src='images/Bitmap.png' alt="">
+						<div class="swiper__item">
+							<div class="swiper__title">
+								<span class="span span__small">Новая коллекция бытовой техники</span>
+								<span class="span span__big">Platinum</span>
+							</div>
+							<div class="swiper__box">
+								<a href="" class="swiper__link">Посмотреть</a>
+							</div>
+						</div>
 					</div>
-					<!-- /.breadcrumbs -->
-
-
-					<div class="title">FOOBAR</div>
-
-					<label class="checkbox search__checkbox">
-						<input type="checkbox" class="checkbox__input">
-						<span class="checkbox__icon"></span>
-						<span class="checkbox__text">По сайту</span>
-					</label>
-					<!-- /.checkbox -->
-
-					<div class="pagination">
-						<a href="#" class="pagination__prev"></a>
-						<a href="#" class="pagination__item">1</a>
-						<a href="#" class="pagination__item">2</a>
-						<a href="#" class="pagination__item">3</a>
-						<a href="#" class="pagination__more">...</a>
-						<a href="#" class="pagination__item">17</a>
-						<a href="#" class="pagination__next"></a>
+					<div class="swiper-slide">
+						<img src='images/Bitmap.png' alt="">
+						<div class="swiper__item">
+							<div class="swiper__title">
+								<span class="span span__small">Новая коллекция бытовой техники</span>
+								<span class="span span__big">Platinum</span>
+							</div>
+							<div class="swiper__box">
+								<a href="" class="swiper__link">Посмотреть</a>
+							</div>
+						</div>
 					</div>
-					<!-- /.pagination -->
-
-					<div class="icon icon_ambulance"></div>
-
-					<div class="icon icon_auth"></div>
-
-					<div class="icon icon_auth2"></div>
-					<!-- /.icon icon_auth -->
-
-
-					<div class="text-default">
-
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique asperiores, quasi hic. Assumenda voluptatibus tenetur, praesentium officiis similique aperiam qui, odit sit nemo magni! Voluptate ipsum maiores consequatur aspernatur tenetur.
-						</p>
-
-						<table>
-							<tr>
-								<td>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
-								</td>
-								<td>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
-								</td>
-								<td>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquam non odio quis eius, asperiores, esse aperiam corporis molestias iure placeat provident, incidunt earum voluptatum minima amet quam. Nemo, natus.
-								</td>
-							</tr>
-						</table>
-
-						<a href="">Link</a>
-
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-
-						и т.д.
-
+					<div class="swiper-slide">
+						<img src='images/Bitmap.png' alt="">
+						<div class="swiper__item">
+							<div class="swiper__title">
+								<span class="span span__small">Новая коллекция бытовой техники</span>
+								<span class="span span__big">Platinum</span>
+							</div>
+							<div class="swiper__box">
+								<a href="" class="swiper__link">Посмотреть</a>
+							</div>
+						</div>
 					</div>
-					<!-- /.text-default -->
-
-					<!-- END WORKAREA -->
+					<div class="swiper-slide">
+						<img src='images/Bitmap.png' alt="">
+						<div class="swiper__item">
+							<div class="swiper__title">
+								<span class="span span__small">Новая коллекция бытовой техники</span>
+								<span class="span span__big">Platinum</span>
+							</div>
+							<div class="swiper__box">
+								<a href="" class="swiper__link">Посмотреть</a>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!-- /.content -->
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
 
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar"></div>
 			</div>
-			<!-- /.middle__container -->
+		</div>
+
+		<div class="section">
+			<div class="content">
+				<!-- WORKAREA -->
+				<div class="special-offers">
+					<span class="special-offers__title">Специальные предложения</span>
+					<!-- Slider main container -->
+					<div class="swiper-container-two">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">Slide 1</div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+							...
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
+
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+
+						<!-- If we need scrollbar -->
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+				<div class="new-items">
+					<span class="new-items__title">Новинки
+						<span class="new-items__indicator">
+							<i>57</i>новинок</span>
+					</span>
+					<!-- Slider main container -->
+					<div class="swiper-container">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">Slide 1</div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+							...
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
+
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+
+						<!-- If we need scrollbar -->
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+				<div class="articles">
+					<span class="articles__title">Статьи</span>
+					<div class="articles__items">
+						<div class="articles__item">
+							<span class="articles__text"></span>
+							<span class="articles__date"></span>
+							<span class="articles__info"></span>
+						</div>
+						<div class="articles__item">
+							<span class="articles__text"></span>
+							<span class="articles__date"></span>
+							<span class="articles__info"></span>
+						</div>
+						<div class="articles__item">
+							<span class="articles__text"></span>
+							<span class="articles__date"></span>
+							<span class="articles__info"></span>
+						</div>
+						<div class="articles__item">
+							<span class="articles__text"></span>
+							<span class="articles__date"></span>
+							<span class="articles__info"></span>
+						</div>
+					</div>
+					<a href="" class="articles__link">Все Статьи</a>
+				</div>
+				<!-- END WORKAREA -->
+			</div>
+			<!-- /.content -->
 		</div>
 		<!-- /.middle -->
 
@@ -207,106 +299,159 @@
 
 			<div class="footer">
 				<div class="footer__col">
-
-					<div class="footer__logo">
-						<a href="/">
-							<img src="images/logotype-footer.svg" alt="">
-						</a>
-						<div class="footer__copyright">
-							2019 &copy; All right reserved | KitchenMarket
-						</div>
-					</div>
-					<!-- /.footer__logo -->
-
-				</div>
-				<!-- /.footer__col -->
-				<div class="footer__col">
-
 					<nav class="menu-footer">
-
 						<ul class="menu-footer__list">
-							<li class="menu-footer__titlelist">
-								<div class="footer__title">Карта сайта</div>
-							</li>
-
+							<li class="menu-footer__title">Приготовление пищи</li>
 							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Салоны</a>
+								<a class="menu-footer__link" href="/moskva/varochnye-paneli-gorenje/">Варочные панели
+								</a>
 							</li>
-							<!-- /.menu-footer__item -->
-
 							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Кухни</a>
+								<a class="menu-footer__link" href="/moskva/duhovye-shkafy-gorenje/">Модульные системы
+								</a>
 							</li>
-							<!-- /.menu-footer__item -->
-
 							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Комплектующие</a>
+								<a class="menu-footer__link" href="/moskva/duhovye-shkafy-gorenje/">Духовые шкафы</a>
 							</li>
-							<!-- /.menu-footer__item -->
-
 							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Бытовая техника</a>
+								<a class="menu-footer__link" href="/moskva/mikrovolnovye-pechi-gorenje/">Микроволновые печи
+								</a>
 							</li>
-							<!-- /.menu-footer__item -->
-
 							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Хотите дешевле?</a>
+								<a class="menu-footer__link" href="/moskva/vstraivaemye-parovarki-gorenje/">Пароварки</a>
 							</li>
-							<!-- /.menu-footer__item -->
-
 							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Мнения экспертов</a>
+								<a class="menu-footer__link" href="/moskva/vytyazhki-gorenje/">Вытяжки</a>
 							</li>
-							<!-- /.menu-footer__item -->
-
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/kofemashiny-gorenje/">Кофемашины</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/plity-gorenje/">Плиты</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/shkafy-dlya-podogreva-posudy-gorenje/">Шкафы для подогрева посуды</a>
+							</li>
 						</ul>
-						<!-- /.menu-footer__list -->
-
-						<ul class="menu-footer__list">
-							<li class="menu-footer__titlelist">
-								<div class="footer__title">О проекте</div>
-							</li>
-
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">О компании</a>
-							</li>
-							<!-- /.menu-footer__item -->
-
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Услуги портала</a>
-							</li>
-							<!-- /.menu-footer__item -->
-
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Вакансии</a>
-							</li>
-							<!-- /.menu-footer__item -->
-
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Правила портала</a>
-							</li>
-							<!-- /.menu-footer__item -->
-
-							<li class="menu-footer__item">
-								<a href="#" class="menu-footer__link">Партнёрам</a>
-							</li>
-							<!-- /.menu-footer__item -->
-
-						</ul>
-						<!-- /.menu-footer__list -->
-
 					</nav>
-					<!-- /.menu-footer -->
-
 				</div>
 				<!-- /.footer__col -->
 				<div class="footer__col">
-
-					<div class="footer__block">
-						<a href="#" class="footer__link">Политика конфиденциальности</a>
-						<a href="#" class="footer__link">Политика cookie</a>
-					</div>
-
+					<nav class="menu-footer">
+						<ul class="menu-footer__list">
+							<li class="menu-footer__title">Приготовление пищи</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/varochnye-paneli-gorenje/">Варочные панели
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/duhovye-shkafy-gorenje/">Модульные системы
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/duhovye-shkafy-gorenje/">Духовые шкафы</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/mikrovolnovye-pechi-gorenje/">Микроволновые печи
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/vstraivaemye-parovarki-gorenje/">Пароварки</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/vytyazhki-gorenje/">Вытяжки</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/kofemashiny-gorenje/">Кофемашины</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/plity-gorenje/">Плиты</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/shkafy-dlya-podogreva-posudy-gorenje/">Шкафы для подогрева посуды</a>
+							</li>
+						</ul>
+					</nav>
+					<nav class="menu-footer">
+						<ul class="menu-footer__list">
+							<li class="menu-footer__title">Приготовление пищи</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/varochnye-paneli-gorenje/">Варочные панели
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/duhovye-shkafy-gorenje/">Модульные системы
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/duhovye-shkafy-gorenje/">Духовые шкафы</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/mikrovolnovye-pechi-gorenje/">Микроволновые печи
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/vstraivaemye-parovarki-gorenje/">Пароварки</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/vytyazhki-gorenje/">Вытяжки</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/kofemashiny-gorenje/">Кофемашины</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/plity-gorenje/">Плиты</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/shkafy-dlya-podogreva-posudy-gorenje/">Шкафы для подогрева посуды</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- /.footer__col -->
+				<div class="footer__col">
+					<nav class="menu-footer">
+						<ul class="menu-footer__list">
+							<li class="menu-footer__title">Приготовление пищи</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/varochnye-paneli-gorenje/">Варочные панели
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/duhovye-shkafy-gorenje/">Модульные системы
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/duhovye-shkafy-gorenje/">Духовые шкафы</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/mikrovolnovye-pechi-gorenje/">Микроволновые печи
+								</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/vstraivaemye-parovarki-gorenje/">Пароварки</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/vytyazhki-gorenje/">Вытяжки</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/kofemashiny-gorenje/">Кофемашины</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/plity-gorenje/">Плиты</a>
+							</li>
+							<li class="menu-footer__item">
+								<a class="menu-footer__link" href="/moskva/shkafy-dlya-podogreva-posudy-gorenje/">Шкафы для подогрева посуды</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- /.footer__col -->
+				<div class="footer__col">
+					<div class="footer__text"></div>
+					<a href="" class="footer__tel"></a>
+					<div class="footer__text"></div>
+					<div class="footer__text"></div>
 				</div>
 				<!-- /.footer__col -->
 			</div>
@@ -314,10 +459,11 @@
 
 		</div>
 		<!-- /.footer__inner -->
-
+		<div class="footer__copyright">
+			2019 &copy; All right reserved | KitchenMarket
+		</div>
 	</div>
 	<!-- /.footer -->
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')
