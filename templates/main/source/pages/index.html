@@ -11,55 +11,9 @@
 			<div class="content">
 				<!-- WORKAREA -->
 				{% include 'section/special-offers/special-offers.html' %}
-				<div class="new-items">
-					<span class="new-items__title">Новинки <span class="new-items__indicator"><i>57</i>новинок</span></span>
-					<!-- Slider main container -->
-					<div class="swiper-container">
-						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper">
-							<!-- Slides -->
-							<div class="swiper-slide">Slide 1</div>
-							<div class="swiper-slide">Slide 2</div>
-							<div class="swiper-slide">Slide 3</div>
-							...
-						</div>
-						<!-- If we need pagination -->
-						<div class="swiper-pagination"></div>
-
-						<!-- If we need navigation buttons -->
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
-
-						<!-- If we need scrollbar -->
-						<div class="swiper-scrollbar"></div>
-					</div>
-				</div>
-				<div class="articles">
-					<span class="articles__title">Статьи</span>
-					<div class="articles__items">
-						<div class="articles__item">
-							<span class="articles__text"></span>
-							<span class="articles__date"></span>
-							<span class="articles__info"></span>
-						</div>
-						<div class="articles__item">
-							<span class="articles__text"></span>
-							<span class="articles__date"></span>
-							<span class="articles__info"></span>
-						</div>
-						<div class="articles__item">
-							<span class="articles__text"></span>
-							<span class="articles__date"></span>
-							<span class="articles__info"></span>
-						</div>
-						<div class="articles__item">
-							<span class="articles__text"></span>
-							<span class="articles__date"></span>
-							<span class="articles__info"></span>
-						</div>
-					</div>
-					<a href="" class="articles__link">Все Статьи</a>
-				</div>
+				{% include 'section/new-items/new-items.html' %}
+				{% include 'section/articles/articles.html' %}
+			
 				<!-- END WORKAREA -->
 			</div>
 			<!-- /.content -->

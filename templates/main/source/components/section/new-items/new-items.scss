@@ -1,0 +1,60 @@
+.new-items {
+    background-color: #2e2e2e;
+    padding-bottom: 42px !important;
+    
+
+    &__caption {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        color: #eeeeee !important;
+        margin-bottom: 0 !important;
+        margin-right: 18px;
+    }
+
+    &__how {
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #eeeeee;
+        display: flex;
+        align-items: flex-end;
+
+        i {
+            font-style: normal;
+            padding-right: 5px;
+        }
+    }
+
+    &__link {
+        font-family: 'Gotham Pro Medium';
+        padding: 14px 31px;
+        border-radius: 2px;
+        border: solid 1px #eeeeee;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #eeeeee;
+        margin: 48px auto 0;
+        text-transform: uppercase;
+    }
+
+    .swiper-button-prev {
+        background: url("../images/shape1.svg") 0/16px no-repeat !important;
+        transform: rotate(180deg)
+    }
+
+    .swiper-button-next {
+        background: url("../images/shape1.svg") 0/16px no-repeat !important;
+        left: 94% !important;
+    }
+}

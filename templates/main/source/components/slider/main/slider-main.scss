@@ -3,8 +3,11 @@
 	margin-left: auto;
 	width: 100%;
 	margin-right: auto;
+	overflow: hidden;
 }
-
+.swiper-scrollbar,.swiper-pagination {
+	display: none;
+}
 .swiper {
 	&-slide {
 		position: relative;
@@ -91,8 +94,9 @@
 		background: #ffffff !important;
 		box-sizing: border-box;
 	}
-	&-button-next, &-button-prev {
+	&-button-main {
 		opacity: 0;
 	}
+	
 	
 }

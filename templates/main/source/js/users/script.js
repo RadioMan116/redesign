@@ -23,50 +23,75 @@ $(document).ready(function () {
 
 
 
-	var mySwiper = new Swiper ('.swiper-container', {
+	var mySwiper = new Swiper('.swiper-container-main', {
 		// Optional parameters
 		direction: 'horizontal',
 		loop: true,
-	
-		// If we need pagination
-		pagination: {
-		  el: '.swiper-pagination',
-		},
-	
-		// Navigation arrows
-		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-		},
-	
-		// And if we need scrollbar
-		scrollbar: {
-		  el: '.swiper-scrollbar',
-		},
-	  })
-	var mySwiper_2 = new Swiper ('.swiper-container-two', {
-		// Optional parameters
-		direction: 'horizontal',
-		loop: true,
-		initialSlide : 3,
-	
-		// If we need pagination
-		pagination: {
-		  el: '.swiper-pagination',
-		},
-	
-		// Navigation arrows
-		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-		},
-	
-		// And if we need scrollbar
-		scrollbar: {
-		  el: '.swiper-scrollbar',
-		},
-	  })
 
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.main_next',
+			prevEl: '.main_prev',
+		},
+
+		// And if we need scrollbar
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+	})
+
+	var mySwiper2 = new Swiper('.swiper-container-two', {
+		slidesPerView: 4,
+		spaceBetween: 27,
+		slidesPerGroup: 4,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.special-offers_next',
+			prevEl: '.special-offers_prev',
+		},
+	})
+	var mySwiper3 = new Swiper('.swiper-container-three', {
+		slidesPerView: 4,
+		spaceBetween: 27,
+		slidesPerGroup: 4,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.new-items_next',
+			prevEl: '.new-items_prev',
+		},
+	})
+	$(".js-header__search").click(function() {
+		$('.header .search__popup').toggleClass('search__popup-open');
+		$('.header__search').toggleClass('header__search-open');
+	});
+	$(".header__input").on('input', function () {
+		if ($(this).val()) {
+		   $(".header__button,.header__submit").show();
+		}
+		else {
+		   $(".header__button,.header__submit").hide();
+		}
+	 });
+	 
+	 $(".header__button").click(function () {
+		$(".header__input").val('');
+		$(this).hide();
+	 });
 	window.globalPopup = new Popup();
 
 	// $(".js-combox").combox({

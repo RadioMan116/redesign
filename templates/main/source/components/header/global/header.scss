@@ -5,6 +5,7 @@
 	margin-left: auto;
 	width: 100%;
 	margin-right: auto;
+	position: relative;
 
 	.header-inner & {
 		flex-direction: row-reverse;
@@ -118,23 +119,88 @@
 		width: 24px;
 		height: 24px;
 		margin-right: 24px;
+		background: url("../images/search.svg") 0/24px no-repeat;
+		
+		&-open {
+			background: url("https://icongr.am/clarity/close.svg?color=ffffff") 0/24px no-repeat;
+		}
+	}
+
+	.search__popup {
+		position: absolute;
+		width: 100%;
+		top: 100%;
+		background-color: #2e2e2e;
+		padding: 30px 0 26px;
+		display: flex;
+		justify-content: center;
+		z-index: 99;
+		right: 100%;
+		opacity: 0;
+		&-open {
+			display: flex;
+			right: 0;
+			opacity: 1;
+		}
+	}
+
+	&__overlay {
+		top: 100px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		opacity: 0.6;
+		background-color: #000000;
+		z-index: -1;
 	}
 
 	&__form {
 		position: relative;
+		width: 45%;
+		display: flex;
+		justify-content: space-between;
 
 		input {
 			border: 0;
 		}
 	}
 
+	&__button {
+		max-width: 24px;
+		width: 100%;
+		height: 24px;
+		background: url("https://icongr.am/clarity/close.svg?color=ffffff") 0/24px no-repeat;
+		position: absolute;
+		top: 0;
+		right: 5%;
+		display: none;
+	}
+
+	&__input {
+		width: 100%;
+		background: inherit;
+		border-bottom: 1px solid #ffffff !important;
+		font-family: 'Gotham Pro';
+		font-size: 24px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: #ffffff;
+		padding-bottom: 15px;
+	}
+
 	&__submit {
 		background: url("../images/search.svg") 0/24px no-repeat;
+		border: 0;
 		position: absolute;
 		right: 0;
-		top: 0;
-		width: 100%;
-		border: 0;
+		min-width: 24px;
+		min-height: 24px;
+		display: none;
 	}
 
 	&__compare {

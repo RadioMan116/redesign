@@ -24,13 +24,7 @@
 				</div>
 				{% include 'menu/menu-header/menu-header.html' %}
 				<div class="header__icons">
-					<div class="header__search">
-						<form action="/search/" class="header__form">
-							<input type="text" name="q" maxlength="50" class="header__input" id="js-search-header__input" style="width: 0px;">
-							<input type="submit" value="" class="header__submit">
-						</form>
-						<div class="header__search-list"></div>
-					</div>
+					<div class="header__search js-header__search"></div>
 					<div class="header__compare">
 						<span class="header__number">0</span>
 					</div>
@@ -45,6 +39,14 @@
 
 		</div>
 
+	</div>
+	<div class="search__popup">
+		<form action="/search/" class="header__form">
+			<input type="text" name="q" maxlength="50" class="header__input" id="js-search-header__input">
+			<input type="submit" value="" class="header__submit">
+			<div class="header__button"></div>
+		</form>
+		<div class="header__overlay"></div>
 	</div>
 
 </header>

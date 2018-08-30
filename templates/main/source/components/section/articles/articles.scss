@@ -1,0 +1,97 @@
+.articles {
+    padding: 48px 0 72px;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        font-family: 'Gotham Pro';
+        font-size: 32px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #212121;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        font-family: 'Gotham Pro Medium';
+        padding: 14px 31px;
+        border-radius: 2px;
+        border: solid 1px #aa6e4f;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #aa6e4f;
+        margin: 48px auto 0;
+        text-transform: uppercase;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        width: 25%;
+        box-sizing: border-box;
+        margin-right: 28px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__img {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        width: 100%;
+        font-family: 'Gotham Pro Medium';
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #2e2e2e;
+        margin-bottom: 13px;
+    }
+
+    &__date {
+        font-family: 'Gotham Pro';
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #666666;
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        font-family: 'Gotham Pro';
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        text-align: left;
+        color: #2e2e2e;
+    }
+}
