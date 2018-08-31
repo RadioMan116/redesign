@@ -75,23 +75,49 @@ $(document).ready(function () {
 			prevEl: '.new-items_prev',
 		},
 	})
-	$(".js-header__search").click(function() {
+	$(".js-header__search").click(function () {
 		$('.header .search__popup').toggleClass('search__popup-open');
 		$('.header__search').toggleClass('header__search-open');
+		$('.header__overlay').toggleClass('header__overlay-open')
 	});
 	$(".header__input").on('input', function () {
 		if ($(this).val()) {
-		   $(".header__button,.header__submit").show();
+			$(".header__button,.header__submit").show();
+		} else {
+			$(".header__button,.header__submit").hide();
 		}
-		else {
-		   $(".header__button,.header__submit").hide();
-		}
-	 });
-	 
-	 $(".header__button").click(function () {
+	});
+	$(".header__button").click(function () {
 		$(".header__input").val('');
 		$(this).hide();
-	 });
+	});
+	$('.abuse__button').click(function(event){
+		event.preventDefault();
+		$('.abuse-popup-container').css('display','flex')
+		$('.header__overlay').show()
+		return false
+	});
+	$('.header__call-phone-button').click(function(event){
+		event.preventDefault();
+		$('.callback_popup').css('display','flex')
+		$('.header__overlay').show()
+		return false
+	});
+	$('.js-modal-close').click(function(event){
+		event.preventDefault();
+		$('.popup_container').hide()
+		$('.header__overlay').hide()
+		return false
+	});
+	$('.menu__item').first().click(function(event){
+		if ($('.header__dropdown-menu').css("display") == "none") {
+			$('.header__dropdown-menu').show()
+			$('.header__overlay').show()
+		} else {
+			$('.header__dropdown-menu').hide()
+			$('.header__overlay').hide()
+		}
+	});
 	window.globalPopup = new Popup();
 
 	// $(".js-combox").combox({

@@ -1,64 +1,91 @@
 .menu {
-	display: flex;
-	align-items: center;
+  * {
+    transition: 0.2s;
+  }
+  nav {
+    width: 100%;
+  }
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 75%;
 
-	&__list {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-		display: flex;
-		justify-content: space-around;
-	}
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
 
-	&__item {
-		margin-right: 36px;
+  &__item {
+    // padding-right: 40px;
 
-		&:last-child {
-			margin-right: 0;
-		}
-	}
+    &:first-child {
+      background: url("https://icongr.am/fontawesome/caret-right.svg") 4rem/18px no-repeat;
 
-	&__link {
-		display: block;
-		font-family: 'Gotham Pro Bold';
-		font-size: 12px;
-		font-weight: bold;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: 2;
-		letter-spacing: normal;
-		text-align: left;
-		color: #ffffff;
-		text-transform: uppercase;
+      &:hover {
+        background: url("https://icongr.am/fontawesome/caret-down.svg?color=aa6e4f") 4rem/18px no-repeat;
+      }
+    }
 
-		&:hover {
-			color: #014c8c;
-		}
-	}
+    &:hover {
+      a {
+        color: #aa6e4f;
+        text-decoration: none;
+      }
+    }
 
-	@media(max-width: 768px) {
-		transform: scale(0);
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		transition: transform 0.3s;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 
-		&.active {
-			transform: scale(1);
-			background: #fff;
-			z-index: 10;
-		}
+  &__link {
+    display: block;
+    font-family: "Gotham Pro Bold";
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
 
-		&__list {
-			flex-direction: column;
-			align-items: center;
-			padding-top: 10px;
-			padding-bottom: 10px;
-		}
+  @media (max-width: 768px) {
+    transform: scale(0);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s;
 
-		&__item+&__item {
-			margin-top: 10px;
-		}
-	}
+    &.active {
+      transform: scale(1);
+      background: #fff;
+      z-index: 10;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &__item+&__item {
+      margin-top: 10px;
+    }
+  }
+}
+@media screen and (max-width: 1110px) {
+	.menu__item {
+    padding-right: unset;
+  }
+
 }

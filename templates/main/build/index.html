@@ -58,18 +58,39 @@
 						<!-- /.logo -->
 						<div class="header__telephones">
 							<a href="tel:+74955653990" class="header__phone">+7 (495) 565-39-90</a>
-							<a href="tel:+74955653990" class="header__call-phone-button">Заказать звонок</a>
+							<a href="#" class="header__call-phone-button">Заказать звонок</a>
+							<div class="popup_container callback_popup">
+								<a href="#" class="modal__close js-modal-close" onclick="return mnt.overlay.closePopup({popupID:'callback_popup'});" title="Закрыть">×</a>
+								<span class="title-strike abuse__title">Заказать звонок</span>
+								<div id="callback-response"></div>
+								<div class="call-popup-phone-inner relative" id="callback-form-wrap">
+									<p>Наши менеджеры ответят вам в течениии 30 мин</p>
+									<form class="callback__form" action="" method="post" id="callback-form">
+										<input type="text" name="phone" value="" id="input-phone" placeholder="Ваше имя">
+										<input type="text" name="" value="" id="input-name" placeholder="Номер телефона">
+										<div class="abuse-popup__item">
+											<label>
+												<input class="checkbox filter_checkbox pers_data_check" type="checkbox" checked="">
+												<span class="checkbox-custom"></span>
+												<i class="icon-check"></i>Согласен с
+												<a target="_blank" href="/personal_data/">
+													использованием персональных данных
+												</a>
+												для обработки обращения
+											</label>
+											<input type="submit" value="Отправить" class="btn-sub3 abuse-popup__submit" name="">
+										</div>
+									</form>
+								</div>
+							</div>
 						</div>
 					</div>
-
 				</div>
 				<div class="header__block header__block_bottom">
-
 					<div class="header__border header__border_top"></div>
 					<div class="container">
 						<button class="hamburger" id="js-hamburger" aria-expanded="false">
 							<span class="hamburger__screen-reader-text">Menu</span>
-
 						</button>
 						<div class="header__img">
 							<img src="images/dit-sign.svg" alt="" class="logo__pic">
@@ -124,12 +145,66 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="header__border header__border_bottom"></div>
-
-
 				</div>
-
+				<div class="header__dropdown-menu ">
+					<div class="container">
+						<nav class="dropdown-menu dropdown-menu__first">
+							<ul class="dropdown-menu__list">
+								<li class="dropdown-menu__title">Приготовление пищи</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Варочные панели</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Модульные системы</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Духовые шкафы</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Микроволновые печи</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Пароварки</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Вытяжки</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Подогреватели посуды</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Кофемашины</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="dropdown-menu dropdown-menu__two">
+							<ul class="dropdown-menu__list">
+								<li class="dropdown-menu__title">Мойка и стирка</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Стиральные машины</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Посудомоечные машины</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="dropdown-menu dropdown-menu__three">
+							<ul class="dropdown-menu__list">
+								<li class="dropdown-menu__title">Охлаждение</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Холодильники</a>
+								</li>
+								<li class="dropdown-menu__item">
+									<a class="dropdown-menu__link" href="">Винные шкафы</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="header__banner">
+							<img src="images/banner.jpg" srcset="images/banner@2x.jpg 2x,images/banner@3x.jpg 3x" class="special-offers__img">
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="search__popup">
 				<form action="/search/" class="header__form">
@@ -137,9 +212,9 @@
 					<input type="submit" value="" class="header__submit">
 					<div class="header__button"></div>
 				</form>
-				<div class="header__overlay"></div>
-			</div>
 
+			</div>
+			<div class="header__overlay"></div>
 		</header>
 		<div class="gallery">
 			<!-- Slider main container -->
@@ -153,8 +228,6 @@
 							<div class="swiper__title">
 								<span class="span span__small">Новая коллекция бытовой техники</span>
 								<span class="span span__big">Platinum</span>
-							</div>
-							<div class="swiper__box">
 								<a href="" class="swiper__link">Посмотреть</a>
 							</div>
 						</div>
@@ -165,8 +238,6 @@
 							<div class="swiper__title">
 								<span class="span span__small">Новая коллекция бытовой техники</span>
 								<span class="span span__big">Platinum</span>
-							</div>
-							<div class="swiper__box">
 								<a href="" class="swiper__link">Посмотреть</a>
 							</div>
 						</div>
@@ -177,8 +248,6 @@
 							<div class="swiper__title">
 								<span class="span span__small">Новая коллекция бытовой техники</span>
 								<span class="span span__big">Platinum</span>
-							</div>
-							<div class="swiper__box">
 								<a href="" class="swiper__link">Посмотреть</a>
 							</div>
 						</div>
@@ -189,8 +258,6 @@
 							<div class="swiper__title">
 								<span class="span span__small">Новая коллекция бытовой техники</span>
 								<span class="span span__big">Platinum</span>
-							</div>
-							<div class="swiper__box">
 								<a href="" class="swiper__link">Посмотреть</a>
 							</div>
 						</div>
@@ -557,6 +624,7 @@
 					<div class="footer__copyright">
 						2019 &copy; All right reserved | KitchenMarket
 					</div>
+
 					<div class="l-abuse">
 						<a href="#" class="footer__button abuse__button" id="js-abuse-opener">Пожаловаться руководству</a>
 						<div id="js-abuse-popup" class="popup_container abuse-popup-container">
@@ -564,18 +632,20 @@
 								Пожаловаться руководству
 							</span>
 							<div class="abuse-popup" id="js-abuse-response">
+								<a href="#" class="modal__close js-modal-close" title="Закрыть">×</a>
 								<form action="" method="post" id="js-abuse-form" class="abuse-popup__form" style="position:relative;">
 									<input type="hidden" name="ABUSE[SEND]" value="1">
 									<input type="hidden" name="action" value="ABUSE">
 									<input type="hidden" name="id" value="0">
 
 									<p class="abuse-popup__text">
-										Руководство интернет-магазина mitsubishi-japan.ru уделяет пристальное внимание качеству обслуживания своих клиентов.
+										Руководство интернет-магазина
+										<a href="" class="abuse-popup__link">dedietrich-home.ru</a>уделяет пристальное внимание качеству обслуживания своих клиентов.
 									</p>
 									<p class="abuse-popup__text">
 										Если вы столкнулись с какими-либо проблемами на любом этапе заказа - мы будем благодарны за подробную информацию.
 									</p>
-									<p class="abuse-popup__text">
+									<p class="abuse-popup__text abuse-popup__text-last">
 										Все сообщения рассматриваются лично руководством магазина.
 									</p>
 									<div class="abuse-popup__item">
@@ -589,7 +659,7 @@
 										<input type="text" name="ABUSE[ORDER_ID]" value="" class="abuse-popup__input ffield_validate" title="Номер заказа">
 									</div>
 									<div class="abuse-popup__item">
-										<strong class="abuse-popup__name">Телефон или e-mail для связи:
+										<strong class="abuse-popup__name">Email или телефон для связи:
 											<span class="abuse-popup__req">*</span>
 										</strong>
 										<input type="text" name="ABUSE[PHONE_EMAIL]" value="" class="abuse-popup__input ffield_validate ffield_req" title="Телефон или e-mail для связи">
@@ -605,18 +675,19 @@
 										<span class="abuse-popup__required">
 											<span class="abuse-popup__req">*</span>- поля, обязательные для заполнения
 										</span>
-										<input type="submit" value="Отправить" class="btn-sub3 abuse-popup__submit" name="">
 									</div>
 									<br>
 									<div class="abuse-popup__item">
 										<label>
 											<input class="checkbox filter_checkbox pers_data_check" type="checkbox" checked="">
+											<span class="checkbox-custom"></span>
 											<i class="icon-check"></i>Согласен с
 											<a target="_blank" href="/personal_data/">
 												использованием персональных данных
 											</a>
 											для обработки обращения
 										</label>
+										<input type="submit" value="Отправить" class="btn-sub3 abuse-popup__submit" name="">
 									</div>
 								</form>
 

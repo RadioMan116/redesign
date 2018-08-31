@@ -1,7 +1,7 @@
 .footer {
 	background-color: #2e2e2e;
 	padding: 28px 0 19px;
-	z-index: 1000;
+	z-index: 3;
 	position: relative;
 
 	&__inner {
@@ -11,7 +11,6 @@
 
 	&__col {
 		width: 25%;
-		
 	}
 
 	&__row {
@@ -22,7 +21,7 @@
 	}
 
 	&__copyright {
-		font-family: 'Gotham Pro';
+		font-family: "Gotham Pro";
 		font-size: 12px;
 		font-weight: normal;
 		font-style: normal;
@@ -39,7 +38,7 @@
 		padding: 4px 10px 4px 11px;
 		border-radius: 2px;
 		border: solid 1px #979797;
-		font-family: 'Gotham Pro Medium';
+		font-family: "Gotham Pro Medium";
 		font-size: 10px;
 		font-weight: 500;
 		font-style: normal;
@@ -53,7 +52,7 @@
 	}
 
 	&__text {
-		font-family: 'Gotham Pro';
+		font-family: "Gotham Pro";
 		font-size: 12px;
 		font-weight: normal;
 		font-style: normal;
@@ -65,7 +64,7 @@
 	}
 
 	&__tel {
-		font-family: 'Gotham Pro Medium';
+		font-family: "Gotham Pro Medium";
 		font-size: 20px;
 		font-weight: 500;
 		font-style: normal;
@@ -80,7 +79,7 @@
 
 .menu-footer {
 	&__title {
-		font-family: 'Gotham Pro Medium';
+		font-family: "Gotham Pro Medium";
 		font-size: 14px;
 		font-weight: 500;
 		font-style: normal;
@@ -91,9 +90,8 @@
 		color: #eeeeee;
 	}
 
-	&__link,
-		{
-		font-family: 'Gotham Pro';
+	&__link {
+		font-family: "Gotham Pro";
 		font-size: 12px;
 		font-weight: normal;
 		font-style: normal;
@@ -108,5 +106,192 @@
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
+	}
+}
+
+.popup_container {
+	position: fixed !important;
+	width: 572px;
+	left: 50% !important;
+	top: 50% !important;
+	transform: translate(-50%, -50%) !important;
+	margin: auto !important;
+	z-index: 1001;
+	box-shadow: 0 0 10px -2px #748690;
+	-moz-box-shadow: 0 0 10px -2px #748690;
+	-webkit-box-shadow: 0 0 10px -2px #748690;
+	padding: 35px 31px 27px;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index:3 ;
+
+	&-active {
+		display: flex;
+	}
+}
+
+.abuse {
+	&__title {
+		font-family: "Gotham Pro Medium";
+		font-size: 24px;
+		font-weight: 500;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1;
+		letter-spacing: normal;
+		text-align: left;
+		color: #2e2e2e;
+		margin-bottom: 22px;
+	}
+
+	&-popup {
+		&__text {
+			font-family: "Gotham Pro";
+			font-size: 14px;
+			font-weight: normal;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.57;
+			letter-spacing: normal;
+			text-align: left;
+			color: #262626;
+			margin-bottom: 32px;
+
+			&-last {
+				padding-bottom: 32px;
+				border-bottom: solid 1px #d9d9d9;
+			}
+		}
+
+		a,
+		&__req {
+			color: #aa6e4f;
+			padding-right: 5px;
+		}
+
+		&__req {
+			font-size: 14px;
+		}
+
+		&__item {
+			display: flex;
+			height: 46px;
+			align-items: center;
+			margin-bottom: 8px;
+			justify-content: space-between;
+
+			label {
+				font-size: 12px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.5;
+				letter-spacing: normal;
+				text-align: left;
+				color: #666666;
+			}
+
+			/* Скрываем реальный чекбокс */
+			.checkbox {
+				display: none;
+			}
+
+			/* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
+			.checkbox-custom {
+				position: relative;
+				/* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+				width: 20px;
+				/* Обязательно задаем ширину */
+				height: 20px;
+				/* Обязательно задаем высоту */
+				border: 2px solid #ccc;
+				border-radius: 3px;
+			}
+
+			/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+			.checkbox-custom,
+			.label {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+			.checkbox:checked+.checkbox-custom::before {
+				content: "";
+				/* Добавляем наш псевдоэлемент */
+				display: block;
+				/* Делаем его блочным элементом */
+				position: absolute;
+				/* Позиционируем его абсолютным образом */
+				/* Задаем расстояние от верхней, правой, нижней и левой границы */
+				top: 2px;
+				right: 2px;
+				bottom: 2px;
+				left: 2px;
+				background: #aa6e4f;
+				/* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+				border-radius: 2px;
+			}
+
+			label {
+				width: 60%;
+			}
+		}
+
+		&__name {
+			width: 40%;
+			padding-right: 5%;
+		}
+
+		&__input,
+		&__textarea {
+			width: 60%;
+			height: 100%;
+			border-radius: 2px;
+			background-color: #ffffff;
+			border: solid 1px #cbcbcb;
+			padding: 5px 15px;
+			line-height: normal;
+			resize: none
+		}
+
+		&__required {
+			margin-left: 40%;
+			font-size: 12px;
+			font-weight: normal;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.5;
+			letter-spacing: normal;
+			text-align: left;
+			color: #666666;
+		}
+
+		&__submit {
+			width: 175px;
+			height: 46px;
+			border-radius: 2px;
+			background-color: #aa6e4f;
+			font-size: 14px;
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.71;
+			letter-spacing: normal;
+			color: #ffffff;
+			text-transform: uppercase;
+		}
+
+		.modal__close {
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			font-size: 24px;
+		}
 	}
 }

@@ -5,9 +5,12 @@
 	margin-right: auto;
 	overflow: hidden;
 }
-.swiper-scrollbar,.swiper-pagination {
+
+.swiper-scrollbar,
+.swiper-pagination {
 	display: none;
 }
+
 .swiper {
 	&-slide {
 		position: relative;
@@ -55,6 +58,7 @@
 			&__big {
 				font-size: 100px;
 				line-height: 1.05;
+				margin-bottom: 33px;
 			}
 		}
 	}
@@ -86,17 +90,29 @@
 		color: #ffffff;
 		text-transform: uppercase;
 	}
-	&-pagination-bullet{
+
+	&-pagination-bullet {
 		border-radius: unset !important;
 		transform: rotate(45deg);
 	}
+
 	&-pagination-bullet-active {
 		background: #ffffff !important;
 		box-sizing: border-box;
 	}
+
 	&-button-main {
 		opacity: 0;
 	}
-	
-	
+
+}
+
+@media screen and (max-width: 1110px) {
+	.gallery {
+
+		img {
+			min-height: 400px;
+		}
+	}
+
 }
