@@ -118,8 +118,12 @@
 		display: flex;
 		align-items: center;
 		flex: 1 1;
-		flex-basis: 18%;
-		justify-content: space-around;
+		flex-basis: 6%;
+		justify-content: space-between;
+		min-width: 100px;
+		@media (max-width:1200px) {
+			padding-right: 5px;
+		}
 	}
 
 	&__search {
@@ -129,6 +133,11 @@
 
 		&-open {
 			background: url("https://icongr.am/clarity/close.svg?color=ffffff") 0/24px no-repeat;
+		}
+		@media (max-width:850px) {
+			width: 16px;
+			height: 16px;
+			background-size: 16px;
 		}
 	}
 
@@ -215,16 +224,21 @@
 	}
 
 	&__compare {
-		width: 40px;
-		padding-left: 36px;
+		width: 39px;
 		background: url("../images/compare.svg") 0 /24px no-repeat;
+		@media (max-width:850px){
+			width: 30px;
+			background-size: 16px;
+		}
 	}
 
 	&__basket {
-		width: 40px;
-		padding-left: 36px;
-		margin-right: 24px;
+		width: 39px;
 		background: url("../images/shopping-cart.svg") 0 /24px no-repeat;
+		@media (max-width:850px){
+			width: 30px;
+			background-size: 16px;
+		}
 	}
 
 	&__number {
@@ -235,8 +249,10 @@
 		font-stretch: normal;
 		line-height: 2;
 		letter-spacing: normal;
-		text-align: left;
+		display: flex;
+		justify-content: flex-end;
 		color: #ffffff;
+		height: 21px;
 	}
 }
 
