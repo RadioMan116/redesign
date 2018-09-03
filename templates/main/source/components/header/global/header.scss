@@ -34,6 +34,9 @@
 			.container {
 				justify-content: center;
 			}
+			.header__icons {
+				display: none;
+			}
 		}
 
 		&_bottom {
@@ -121,9 +124,6 @@
 		flex-basis: 6%;
 		justify-content: space-between;
 		min-width: 100px;
-		@media (max-width:1200px) {
-			padding-right: 5px;
-		}
 	}
 
 	&__search {
@@ -134,6 +134,7 @@
 		&-open {
 			background: url("https://icongr.am/clarity/close.svg?color=ffffff") 0/24px no-repeat;
 		}
+
 		@media (max-width:850px) {
 			width: 16px;
 			height: 16px;
@@ -226,7 +227,8 @@
 	&__compare {
 		width: 39px;
 		background: url("../images/compare.svg") 0 /24px no-repeat;
-		@media (max-width:850px){
+
+		@media (max-width: 850px) {
 			width: 30px;
 			background-size: 16px;
 		}
@@ -235,7 +237,8 @@
 	&__basket {
 		width: 39px;
 		background: url("../images/shopping-cart.svg") 0 /24px no-repeat;
-		@media (max-width:850px){
+
+		@media (max-width: 850px) {
 			width: 30px;
 			background-size: 16px;
 		}
@@ -253,6 +256,83 @@
 		justify-content: flex-end;
 		color: #ffffff;
 		height: 21px;
+	}
+
+	.hamburger {
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		outline: 0;
+		border: 0;
+		background: none;
+		padding: 0;
+
+		&__img {
+			width: 24px;
+			height: 24px;
+			background: url('../images/rectangle-6.svg')
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.header {
+			&__img {
+				display: none;
+			}
+
+			&__telephones {
+				display: none;
+			}
+
+			&__block_bottom {
+				position: unset;
+				display: none;
+			}
+
+			&__block_top {
+				height: 60px;
+				.header__icons{
+					display: flex;
+				}
+			}
+
+			&__icons {
+			flex: unset;
+			flex-basis: unset;
+			margin-left: auto;
+			justify-content: space-around;
+			}
+
+			&__search {
+				width: 24px;
+				height: 24px;
+				background: url("../images/search.png") 0/24px no-repeat;
+			}
+
+			&__compare {
+				width: 39px;
+				background: url("../images/compare__color.svg") 0 /24px no-repeat;
+				margin: 0 24px;
+			}
+
+			&__basket {
+				width: 39px;
+				background: url("../images/shopping-cart__color.svg") 0 /24px no-repeat;
+			}
+			&__number {
+				color: #aa6e4f;
+			}
+		}
+
+		.container {
+			justify-content: unset;
+			position: unset;
+		}
+
+		.hamburger {
+			display: block;
+			margin-right: 24px;
+		}
 	}
 }
 
@@ -311,10 +391,9 @@
 		height: unset;
 		flex-wrap: wrap;
 
-		label , input {
+		label,
+		input {
 			width: 100%;
 		}
-
-
 	}
 }

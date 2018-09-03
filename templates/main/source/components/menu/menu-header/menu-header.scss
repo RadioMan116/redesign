@@ -94,5 +94,9 @@
 	.menu__item {
     padding-right: unset;
   }
-
+@media screen and (max-width: 768px) {
+	.menu__item {
+    padding-right: unset;
+  }
+}
 }

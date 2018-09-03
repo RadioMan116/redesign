@@ -51,12 +51,14 @@
         color: #2e2e2e;
         margin-right: -4px;
         padding: 12px 0 24px;
+        height: 100px;
     }
 
     &__sale {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        flex-wrap: wrap;
     }
 
     &__price {
@@ -102,12 +104,24 @@
     .swiper-button-prev{
         background: url("../images/round-arrow-left.svg") 0/24px no-repeat;
         position: absolute;
-        top: 20px;
-        left: 90%;
+        top: 20.9px;
+        right: 100px;
+        left: unset;
     }
     .swiper-button-next{
         background: url("../images/round-arrow-right.svg") 0/24px no-repeat;
         top: 20px;
-        left: 93%;
+        right: 50px;
+    }
+    @media screen and (max-width: 768px) {
+        .special-offers {
+            &__buy {
+                padding: 0;
+                color:transparent;
+                background: url('https://icongr.am/entypo/shopping-cart.svg?color=ffffff')  #aa6e4f no-repeat;
+                background-size: 18px;
+                background-position: center 3px;
+            }
+        }
     }
 }
