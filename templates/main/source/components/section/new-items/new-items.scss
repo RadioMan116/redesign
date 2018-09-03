@@ -50,11 +50,13 @@
 
     .swiper-button-prev {
         background: url("../images/shape1.svg") 0/16px no-repeat !important;
-        transform: rotate(180deg)
+        transform: rotate(180deg);
+        
     }
 
     .swiper-button-next {
         background: url("../images/shape1.svg") 0/16px no-repeat !important;
-        left: 94% !important;
+        top: 20px;
+        right: 50px;
     }
 }

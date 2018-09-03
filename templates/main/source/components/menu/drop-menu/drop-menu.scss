@@ -13,6 +13,10 @@
 	}
 
 	.dropdown-menu {
+		&__back {
+			display: none;
+		}
+
 		&__list {
 			margin: 0;
 			padding: 0;
@@ -24,9 +28,11 @@
 		&__first {
 			width: 35%;
 		}
+
 		&__two {
 			width: 17.5%;
 		}
+
 		&__three {
 			width: 17.5%;
 		}
@@ -60,7 +66,86 @@
 			color: #b0b0b0;
 		}
 	}
+
 	.header__banner {
 		width: 30%;
+	}
+}
+
+@media (max-width: 768px) {
+	.header__dropdown-menu {
+		height: 100%;
+		top: 60px;
+		position: fixed;
+
+		.container {
+			display: block;
+			width: 85vh;
+		}
+
+		.header__banner {
+			display: none;
+		}
+
+		.dropdown-menu {
+			width: 100%;
+
+			&__first {
+				height: 110px;
+				overflow: hidden;
+			}
+
+			&__two {
+				height: 55px;
+				overflow: hidden;
+			}
+
+			&__three {
+				height: 55px;
+				overflow: hidden;
+			}
+
+			&__back {
+				display: block;
+				text-transform: uppercase;
+				border-top: 1px solid #494949;
+				font-size: 14px;
+				font-weight: 500;
+				font-style: normal;
+				font-family: 'Gotham Pro Medium';
+				font-stretch: normal;
+				line-height: 4;
+				letter-spacing: normal;
+				text-align: left;
+				width: 100%;
+				justify-content: flex-end;
+				color: #eeeeee;
+				text-align: right;
+				background: url("https://icongr.am/entypo/chevron-left.svg?color=eeeeee") 0/18px no-repeat;
+			}
+
+			&__list {
+				padding-bottom: 15px;
+				li:hover{
+					color: #aa6e4f
+				}
+			}
+
+			&__item {
+				flex-basis: 100%;
+			}
+
+			&__title {
+				border-top: 1px solid #494949;
+				padding: 15px 0;
+				background: url("https://icongr.am/entypo/chevron-down.svg?color=eeeeee") 100%/18px no-repeat;
+			}
+		}
+		.active {
+			height: unset;
+			.dropdown-menu__title{
+				background: url("https://icongr.am/entypo/chevron-up.svg?color=eeeeee") 100%/18px no-repeat;
+			}
+		}
 	}
 }

@@ -34,6 +34,11 @@
 			.container {
 				justify-content: center;
 			}
+
+			.menu__list {
+				display: none;
+			}
+
 			.header__icons {
 				display: none;
 			}
@@ -201,7 +206,7 @@
 	&__input {
 		width: 100%;
 		background: inherit;
-		border-bottom: 1px solid #ffffff !important;
+		border-bottom: 1px solid #ffffff75 !important;
 		font-family: 'Gotham Pro';
 		font-size: 24px;
 		font-weight: normal;
@@ -291,22 +296,31 @@
 
 			&__block_top {
 				height: 60px;
-				.header__icons{
+
+				.header__icons {
+					display: flex;
+				}
+
+				.menu__list {
 					display: flex;
 				}
 			}
 
 			&__icons {
-			flex: unset;
-			flex-basis: unset;
-			margin-left: auto;
-			justify-content: space-around;
+				flex: unset;
+				flex-basis: unset;
+				margin-left: auto;
+				justify-content: space-around;
 			}
 
 			&__search {
 				width: 24px;
 				height: 24px;
 				background: url("../images/search.png") 0/24px no-repeat;
+
+				&-open {
+					background: url('https://icongr.am/entypo/cross.svg?color=aa6e4f') 0/24px no-repeat;
+				}
 			}
 
 			&__compare {
@@ -319,8 +333,13 @@
 				width: 39px;
 				background: url("../images/shopping-cart__color.svg") 0 /24px no-repeat;
 			}
+
 			&__number {
 				color: #aa6e4f;
+			}
+
+			&__form {
+				width: 95%;
 			}
 		}
 
@@ -332,6 +351,14 @@
 		.hamburger {
 			display: block;
 			margin-right: 24px;
+		}
+
+		.opened {
+			.hamburger__img {
+				background: url('https://icongr.am/entypo/cross.svg?color=7d8082') center;
+				width: 24px;
+				height: 24px;
+			}
 		}
 	}
 }

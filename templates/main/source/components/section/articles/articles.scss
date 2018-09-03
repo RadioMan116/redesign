@@ -46,6 +46,7 @@
         margin-right: 28px;
         display: flex;
         flex-wrap: wrap;
+        align-items: baseline;
 
         &:last-child {
             margin-right: 0;
@@ -93,5 +94,21 @@
         letter-spacing: normal;
         text-align: left;
         color: #2e2e2e;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__items {
+            // overflow-x: scroll;
+        }
+
+        &__item {
+            width: 33%;
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+            &:last-child {
+                display: none;
+            }
+        }
     }
 }

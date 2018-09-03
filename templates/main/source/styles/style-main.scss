@@ -3,7 +3,10 @@ img {
     height: auto;
     max-width: 100%;
 }
-
+.fixed {
+    position: fixed;
+    top: 0;
+}
 .swiper-container, .swiper-container-two, .swiper-container-three {
     margin: 0 auto;
     position: relative;
