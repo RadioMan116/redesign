@@ -5,6 +5,11 @@
 	margin-right: auto;
 	overflow: hidden;
 	position: relative;
+	img {
+		width: auto;
+		height: 100%;
+		max-width: unset;
+	}
 }
 
 .swiper-scrollbar {
@@ -15,7 +20,8 @@
 	&-slide {
 		position: relative;
 		height: unset !important;
-		align-items: flex-start
+		align-items: flex-start;
+		overflow: hidden;
 	}
 
 	&__item {
@@ -108,38 +114,66 @@
 	&-button-main {
 		opacity: 0;
 	}
-
 }
 
-@media screen and (max-width: 1110px) {
-	.gallery {
 
-		img {
-			min-height: 400px;
-		}
-	}
 
-}
 @media screen and (max-width: 768px) {
-	.swiper{
-		&__slide {
-			flex-basis: 30%;
+	.gallery {
+		.swiper {
+		&-slide {
+			height: 400px !important;
 		}
+
 		&__item {
 			padding-top: 57px;
 		}
-		&__link {
-		
-		}
 	}
+	}
+	
+
 	.span {
 		&__small {
 			font-size: 16px !important;
 		}
+
 		&__big {
 			font-size: 72px !important;
 			margin-bottom: 57px !important;
 		}
 	}
+	.fixed {
+		.header__icons {
+			position: absolute;
+			top: 18px;
+			right: 50%;
+		}
+	}
+}
 
+@media screen and (max-width: 480px) {
+	.gallery {
+	
+
+		.span {
+			&__small {
+				width: 234px;
+				font-size: 14px !important;
+				margin-top: 23px;
+			}
+
+			&__big {
+				font-size: 49px !important;
+				margin-bottom: 37px !important;
+			}
+		}
+
+		.swiper__link {
+			max-width: 240px;
+		}
+
+		.swiper-pagination {
+			bottom: 24px;
+		}
+	}
 }

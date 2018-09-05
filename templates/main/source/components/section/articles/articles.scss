@@ -103,12 +103,39 @@
 
         &__item {
             width: 33%;
+
             &:nth-child(3) {
                 margin-right: 0;
             }
+
             &:last-child {
                 display: none;
             }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        &__items {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+
+            &:last-child {
+                display: none;
+            }
+
+        }
+        &__info {
+            display: none;
+        }
+        &__link {
+            margin-top: 0;
+            width: 240px;
+            text-align: center;
         }
     }
 }

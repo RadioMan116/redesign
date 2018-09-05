@@ -1,7 +1,6 @@
 .new-items {
     background-color: #2e2e2e;
     padding-bottom: 42px !important;
-    
 
     &__caption {
         display: flex;
@@ -51,12 +50,41 @@
     .swiper-button-prev {
         background: url("../images/shape1.svg") 0/16px no-repeat !important;
         transform: rotate(180deg);
-        
     }
 
     .swiper-button-next {
         background: url("../images/shape1.svg") 0/16px no-repeat !important;
         top: 20px;
         right: 50px;
+    }
+
+    @media screen and (max-width: 480px) {
+        .new-items__caption {
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .new-items__how {
+            margin-bottom: 24px;
+        }
+    }
+    @media screen and (max-width: 375px) {
+        .swiper-pagination_3 {
+            display: flex;
+            bottom: 80px !important;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+            *{
+                margin: 0 5px;
+            }
+        }
+        .new-items__link {
+            margin-top: 68px;
+        }
+        .swiper-pagination-bullet-active {
+            background: #aa6e4f !important;
+        }
     }
 }

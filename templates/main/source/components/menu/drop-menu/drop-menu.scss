@@ -10,6 +10,10 @@
 	.container {
 		display: flex;
 		padding: 22px 0 24px;
+
+		.header__telephones {
+			display: none;
+		}
 	}
 
 	.dropdown-menu {
@@ -80,7 +84,27 @@
 
 		.container {
 			display: block;
-			width: 85vh;
+
+			.header__telephones {
+				display: flex;
+				width: 100%;
+				padding: 0 24px;
+			}
+
+			.header__phone {
+				font-size: 20px;
+				font-weight: 500;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.2;
+				letter-spacing: normal;
+				text-align: left;
+				color: #eeeeee;
+			}
+
+			.header__call-phone-button {
+				background: unset;
+			}
 		}
 
 		.header__banner {
@@ -103,6 +127,8 @@
 			&__three {
 				height: 55px;
 				overflow: hidden;
+				border-bottom: 1px solid #494949;
+				margin-bottom: 41px;
 			}
 
 			&__back {
@@ -126,7 +152,8 @@
 
 			&__list {
 				padding-bottom: 15px;
-				li:hover{
+
+				li:hover {
 					color: #aa6e4f
 				}
 			}
@@ -141,11 +168,27 @@
 				background: url("https://icongr.am/entypo/chevron-down.svg?color=eeeeee") 100%/18px no-repeat;
 			}
 		}
+
 		.active {
-			height: unset;
-			.dropdown-menu__title{
+			height: unset !important;
+
+			.dropdown-menu__title {
 				background: url("https://icongr.am/entypo/chevron-up.svg?color=eeeeee") 100%/18px no-repeat;
 			}
 		}
+	}
+}
+
+@media (max-width: 375px) {
+	.header__dropdown-menu .container {
+		padding: 22px 24px 24px;
+	}
+
+	* {
+		transition: 0.5s;
+	}
+
+	.dropdown-menu__first {
+		height: 100px !important;
 	}
 }

@@ -8,6 +8,8 @@
 
     .header__telephones {
       display: none;
+      align-items: center;
+      
     }
   }
 
@@ -71,6 +73,10 @@
     @media (max-width: 850px) {
       font-size: 11px;
     }
+  }
+
+  .menu__compare-320 {
+    display: none;
   }
 
   @media (max-width: 768px) {
@@ -158,5 +164,75 @@
 @media screen and (max-width: 1110px) {
   .menu__item {
     padding-right: unset;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu__compare-320 {
+    display: flex !important;
+    font-family: 'Gotham Pro Medium';
+    height: 53px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 3.75;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    font-style: normal;
+    color: #eeeeee;
+    border-bottom: 1px solid #494949;
+    margin-bottom: 24px;
+    padding: 0 0 0 30px;
+    background: url("../images/compare__color.svg") 0 /24px no-repeat;
+
+    i {
+      font-style: normal;
+    }
+
+    &:hover {
+      background-color: #5a5a5a;
+      color: #aa6e4f;
+      i {
+        color:white;
+      }
+    }
+  }
+
+  .menu__list {
+    padding-bottom: 0;
+  }
+
+  .menu__item {
+    padding: 0 10px;
+  }
+
+  .menu__link {
+    font-family: 'Gotham Pro Medium';
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 3.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #eeeeee;
+  }
+  .dropdown-menu__back {
+    font-family: 'Gotham Pro Medium' !important;
+    font-size: 12px !important;
+    line-height: 3.75 !important;
+  }
+
+  .header__telephones {
+    flex-wrap: wrap;
+    height: unset;
+  }
+
+  .header__phone {
+    margin-bottom: 15px;
   }
 }
