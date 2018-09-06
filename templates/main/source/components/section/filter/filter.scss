@@ -1,0 +1,214 @@
+.filter {
+  width: calc(((100% / 12) * 3)-28px);
+  margin-right: 28px;
+
+  &__date {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    font-family: 'Gotham Pro Medium';
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+    margin-bottom: 31px;
+  }
+
+  &__form {
+    background-color: #ffffff;
+    padding: 16px 20px 25px;
+    transition: 0.4s;
+
+    &:hover {
+      box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.14);
+      transition: 0.4s;
+    }
+
+    /* Скрываем реальный чекбокс */
+    .checkbox {
+      display: none;
+
+      /* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
+      &-custom {
+        position: relative;
+        /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+        width: 20px;
+        /* Обязательно задаем ширину */
+        height: 20px;
+        /* Обязательно задаем высоту */
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        margin-left: 0;
+      }
+
+      /* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+      &-custom,
+      .label {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      /* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+      &:checked+.checkbox-custom::before {
+        content: "";
+        /* Добавляем наш псевдоэлемент */
+        display: block;
+        /* Делаем его блочным элементом */
+        position: absolute;
+        /* Позиционируем его абсолютным образом */
+        /* Задаем расстояние от верхней, правой, нижней и левой границы */
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        background: #aa6e4f;
+        /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: 'Gotham Pro Medium';
+    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+
+  &__container {}
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 5px;
+    font-family: 'Gotham Pro';
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.07;
+    letter-spacing: normal;
+    text-align: left;
+    color: #262626;
+    margin-bottom: 20px;
+
+    input {
+      width: 45%;
+      margin-left: -50px;
+      background: transparent;
+      padding-left: 25px;
+      border-radius: 2px;
+      border: solid 1px #d6d6d6;
+      color: #999999;
+    }
+  }
+
+  &__slider {
+    border: none;
+    border-radius: 3px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .ui-slider-range {
+      position: absolute;
+      z-index: 1;
+      font-size: .7em;
+      display: block;
+      border: 0;
+      background-position: 0 0;
+      width: 95%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: #aa6e4f;
+    }
+
+    .ui-slider-handle {
+      width: 12px;
+      height: 12px;
+      transform: rotate(-45deg);
+      border-radius: 2px;
+      background-color: #aa6e4f;
+      border: none;
+      padding: 0;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    background-color: #eeeeee;
+    margin: 16px 0;
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-wrap: wrap;
+
+    label {
+      width: 100%;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #2e2e2e;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    input {
+      -webkit-appearance: none;
+      background: transparent;
+      font-size: 14px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #aa6e4f;
+      font-family: 'Gotham Pro Medium';
+      padding: 14px 74px;
+      border-radius: 2px;
+      border: solid 1px #aa6e4f;
+      text-transform: uppercase;
+      margin-bottom: 19px;
+    }
+  }
+
+  &_reset {
+    font-family: 'Gotham Pro Medium';
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #aa6e4f;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #aa6e4f;
+  }
+}

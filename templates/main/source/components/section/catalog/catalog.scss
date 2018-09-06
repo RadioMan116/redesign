@@ -1,7 +1,6 @@
 .catalog {
-    width: 75%;
+    width: calc((100% / 12) * 9);
     margin-left: auto;
-    padding: 28px 0 0;
 
     * {
         transition: 0.4s;
@@ -18,7 +17,7 @@
     }
 
     .sorting__number {
-        font-family: 'Gotham Pro';
+        font-family: "Gotham Pro";
         font-size: 13px;
         font-weight: normal;
         font-style: normal;
@@ -41,7 +40,7 @@
         margin-bottom: 0;
         align-items: center;
         padding: 0;
-        font-family: 'Gotham Pro Medium';
+        font-family: "Gotham Pro Medium";
         font-size: 14px;
         font-weight: 500;
         font-style: normal;
@@ -76,7 +75,7 @@
         letter-spacing: normal;
         text-align: left;
         color: #aa6e4f;
-        font-family: 'Gotham Pro';
+        font-family: "Gotham Pro";
         border: solid 1px #ae7557;
         border-radius: 4px;
     }
@@ -88,7 +87,7 @@
     }
 
     &__item {
-        width: calc(((100%/12)*4)-28px);
+        width: calc(((100% / 12) * 4)-28px);
         margin-right: 28px;
         margin-bottom: 12px;
         padding: 24px;
@@ -97,6 +96,28 @@
 
         &:hover {
             box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.14);
+        }
+
+        .announcing {
+            width: 46px;
+            height: 46px;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+
+            &_two {
+                top: 64px;
+            }
+
+            &__new {
+                background: -webkit-image-set(url("../images/new.png") 1x, url("../images/new@2x.png") 2x, url("../images/new@3x.png") 3x);
+            }
+            &__hit {
+                background: -webkit-image-set(url("../images/hit.png") 1x, url("../images/hit@2x.png") 2x, url("../images/hit@3x.png") 3x);
+            }
+            &__sale {
+                background: -webkit-image-set(url("../images/sale.png") 1x, url("../images/sale@2x.png") 2x, url("../images/sale@3x.png") 3x);
+            }
         }
     }
 
@@ -107,7 +128,7 @@
     }
 
     &__feature {
-        font-family: 'Gotham Pro';
+        font-family: "Gotham Pro";
         font-size: 12px;
         font-weight: normal;
         font-style: normal;
@@ -120,7 +141,7 @@
 
     &__bold {
         font-weight: 500;
-        font-family: 'Gotham Pro Medium';
+        font-family: "Gotham Pro Medium";
     }
 
     &__existence {
@@ -131,7 +152,7 @@
     }
 
     &__presence {
-        font-family: 'Gotham Pro';
+        font-family: "Gotham Pro";
         font-size: 12px;
         font-weight: normal;
         font-style: normal;
@@ -143,7 +164,7 @@
     }
 
     &__simile {
-        font-family: 'Gotham Pro';
+        font-family: "Gotham Pro";
         font-size: 12px;
         font-weight: normal;
         font-style: normal;
@@ -174,7 +195,7 @@
 
         &__title {
             width: 100%;
-            font-family: 'Gotham Pro Medium';
+            font-family: "Gotham Pro Medium";
             font-size: 16px;
             font-weight: 500;
             font-style: normal;
@@ -186,7 +207,7 @@
         }
 
         &__text {
-            font-family: 'Gotham Pro Medium';
+            font-family: "Gotham Pro Medium";
             font-size: 38px;
             font-weight: 500;
             font-style: normal;
@@ -210,7 +231,7 @@
         }
 
         &__arrow {
-            background: url('../images/shape1.svg') 0/16px no-repeat;
+            background: url("../images/shape1.svg") 0/16px no-repeat;
             width: 16px;
             height: 16px;
             transform: rotate(45deg);
@@ -223,11 +244,11 @@
             height: 48px;
             background-color: #eeeeee;
             display: flex;
-            align-items: center
+            align-items: center;
         }
 
         &__element {
-            font-family: 'Gotham Pro';
+            font-family: "Gotham Pro";
             font-size: 12px;
             font-weight: normal;
             font-style: normal;
@@ -247,7 +268,7 @@
         border-bottom: 1px solid #eeeeee;
 
         &__title {
-            font-family: 'Gotham Pro Medium';
+            font-family: "Gotham Pro Medium";
             font-size: 26px;
             font-weight: 500;
             font-style: normal;
@@ -270,13 +291,13 @@
             letter-spacing: normal;
             text-align: left;
             color: #262626;
-            font-family: 'Gotham Pro';
+            font-family: "Gotham Pro";
         }
     }
 
     .reviews {
         &__title {
-            font-family: 'Gotham Pro Medium';
+            font-family: "Gotham Pro Medium";
             font-size: 26px;
             font-weight: 500;
             font-style: normal;
@@ -299,7 +320,7 @@
         }
 
         &__all {
-            font-family: 'Gotham Pro';
+            font-family: "Gotham Pro";
             font-size: 14px;
             font-weight: normal;
             font-style: normal;
@@ -312,7 +333,7 @@
         }
 
         &__link {
-            font-family: 'Gotham Pro Medium';
+            font-family: "Gotham Pro Medium";
             font-size: 12px;
             font-weight: 500;
             font-style: normal;
@@ -331,19 +352,98 @@
             display: flex;
         }
 
+        &-list {
+            &__field {
+                display: flex;
+                // margin-bottom: 19px;
+                // &:last-child{
+                //     margin-bottom: 0;
+                // }
+                padding: 9.5px 0;
+            }
+
+            &__col {
+                &:first-child {
+                    width: 200px;
+                    flex-shrink: 0;
+                    font-family: 'Gotham Pro Medium';
+                    font-size: 14px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.71;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #262626;
+                }
+
+                &[itemprop="author"] {
+                    font-family: 'Gotham Pro Medium';
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.2;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #262626;
+                }
+
+                &_date {
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.71;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #2e2e2e;
+                }
+
+                &_desc {
+                    margin-right: 5px;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.57;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #262626;
+                }
+            }
+
+            &__model {
+                font-family: 'Gotham Pro Medium';
+                font-size: 14px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.71;
+                letter-spacing: normal;
+                text-align: left;
+                color: #262626;
+            }
+
+            &__item {
+                padding: 39px 0 37px;
+                border-bottom: 1px solid #eeeeee;
+            }
+        }
+
         .ratings {
             display: flex;
 
             &__star {
                 width: 24px;
                 height: 24px;
-                background: url('../images/star.svg') no-repeat;
+                background: url("../images/star.svg") no-repeat;
                 background-position: center;
                 background-size: 21px 20px;
             }
 
             &__none {
-                background: url('../images/rectangle-2.svg') no-repeat;
+                background: url("../images/rectangle-2.svg") no-repeat;
                 background-position: center;
                 background-size: 21px 20px;
             }

@@ -113,6 +113,23 @@ $(document).ready(function () {
       }
     }
   });
+  var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+  });
+  galleryTop.controller.control = galleryThumbs;
+  galleryThumbs.controller.control = galleryTop;
+
   $(".js-header__search").click(function () {
     if ($(".search__popup").hasClass("search__popup-open") == false) {
       $(".header .search__popup").addClass("search__popup-open");
@@ -139,7 +156,7 @@ $(document).ready(function () {
     event.preventDefault();
     $(".abuse-popup-container").css("display", "flex");
     $(".header__overlay").show();
-    $("html").addClass('fixed');
+    $("html").addClass("fixed");
     return false;
   });
   $(".header__call-phone-button").click(function (event) {
@@ -152,7 +169,7 @@ $(document).ready(function () {
     event.preventDefault();
     $(".popup_container").hide();
     $(".header__overlay").hide();
-    $('html').removeClass('fixed')
+    $("html").removeClass("fixed");
     return false;
   });
   $(".dropdown-menu__back").click(function (event) {
@@ -219,6 +236,49 @@ $(document).ready(function () {
         .parent()
         .removeClass("active");
     }
+  });
+  // слайдеры для фильтра
+  function SetSliders() {
+    $("#products-filter div.slider_filter_range").each(function () {
+      var handle = $(this);
+      var container = handle.parents(".filter-slider-container");
+      var inputMin = container.find("input.input_min");
+      var inputMax = container.find("input.input_max");
+
+      var min = parseInt(handle.attr("min"));
+      var max = parseInt(handle.attr("max"));
+      var minVal = parseInt(handle.attr("minval"));
+      var maxVal = parseInt(handle.attr("maxval"));
+
+      handle.slider({
+        range: true,
+        min: min,
+        max: max,
+        values: [minVal, maxVal],
+        slide: function (event, ui) {
+          inputMin.val(ui.values[0]);
+          inputMax.val(ui.values[1]);
+        },
+        stop: function () {
+          $('#products-filter').submit();
+        }
+      });
+      inputMin.blur(function () {
+        var sliderValues = handle.slider("option", "values");
+        if ($(this).val() != sliderValues[0])
+          $('#products-filter').submit();
+      });
+      inputMax.blur(function () {
+        var sliderValues = handle.slider("option", "values");
+        if ($(this).val() != sliderValues[1])
+          $('#products-filter').submit();
+      });
+    });
+  }
+  SetSliders();
+  $("#filter_reset").click(function () {
+    document.location.href = "";
+    return false;
   });
   window.globalPopup = new Popup();
 
