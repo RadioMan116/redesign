@@ -113,39 +113,6 @@ $(document).ready(function () {
       }
     }
   });
-  // var galleryTop = new Swiper('.gallery-top', {
-  //   navigation: {
-  //     nextEl: this.querySelector('.swiper-button-next'),
-  //     prevEl: this.querySelector('.swiper-button-prev'),
-  //   },
-  // });
-  // var galleryThumbs = new Swiper('.gallery-thumbs', {
-  //   centeredSlides: true,
-  //   spaceBetween: 32,
-  //   slidesPerView: 'auto',
-  //   hashNavigation: {
-  //     watchState: true,
-  //   },
-  //   touchRatio: 0.2,
-  //   slideToClickedSlide: true,
-  // });
-  // galleryTop.controller.control = galleryThumbs;
-  // galleryThumbs.controller.control = galleryTop;
-  $(".images").each(function(index, el) {
-    var gtop = $(".thumbSlider", this);
-    var gtmb = $(".galleryThumbs", this);
-    var galleryTop = new Swiper(gtop, {});
-    var galleryThumbs = new Swiper(gtmb, {
-        spaceBetween: 8,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        touchRatio: 0.2,
-        slideToClickedSlide: true
-    });
-
-    galleryTop.params.control = galleryThumbs;
-    galleryThumbs.params.control = galleryTop;
-});
 
   $(".js-header__search").click(function () {
     if ($(".search__popup").hasClass("search__popup-open") == false) {
@@ -257,7 +224,7 @@ $(document).ready(function () {
     $(".hide-tabs__characteristic").hide();
     $(".hide-tabs__delivery").show();
   });
-  
+
   // слайдеры для фильтра
   function SetSliders() {
     $("#products-filter div.slider_filter_range").each(function () {
@@ -281,18 +248,18 @@ $(document).ready(function () {
           inputMax.val(ui.values[1]);
         },
         stop: function () {
-          $('#products-filter').submit();
+          // $('#products-filter').submit();
         }
       });
       inputMin.blur(function () {
         var sliderValues = handle.slider("option", "values");
-        if ($(this).val() != sliderValues[0])
-          $('#products-filter').submit();
+        // if ($(this).val() != sliderValues[0])
+        // $('#products-filter').submit();
       });
       inputMax.blur(function () {
         var sliderValues = handle.slider("option", "values");
-        if ($(this).val() != sliderValues[1])
-          $('#products-filter').submit();
+        // if ($(this).val() != sliderValues[1])
+        // $('#products-filter').submit();
       });
     });
   }
@@ -346,4 +313,35 @@ $(document).ready(function () {
 
     window.addEventListener("resize", setSize, false);
   })("#js-footer", "#js-wrapper");
+
+
+  var galleryTop = [];
+  var galleryThumbs = [];
+
+  $(".gallery-top").each(function (index, element) {
+    var $this = $(this);
+    galleryTop.push(new Swiper(this, {
+      navigation: {
+        nextEl: this.querySelector('.swiper-button-next'),
+        prevEl: this.querySelector('.swiper-button-prev'),
+      },
+    }));
+  });
+
+  $(".gallery-thumbs").each(function (index, element) {
+    var $this = $(this);
+    galleryThumbs.push(new Swiper(this, {
+      centeredSlides: true,
+      spaceBetween: 32,
+      slidesPerView: 'auto',
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
+    }));
+  });
+
+  for (var i = 0; i < galleryTop.length; i++) {
+    galleryTop[i].controller.control = galleryThumbs[i];
+    galleryThumbs[i].controller.control = galleryTop[i];
+
+  }
 });

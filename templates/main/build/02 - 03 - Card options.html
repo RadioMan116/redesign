@@ -389,7 +389,7 @@
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<img src="images/product-card.jpg" srcset="images/product-card@2x.jpg 2x,images/product-card@3x.jpg 3x" class="special-offers__img catalog__img">
-										<div class="announcing announcing__new"></div>
+										<div class="announcing announcing__sale"></div>
 										<div class="announcing announcing_two announcing__hit"></div>
 									</div>
 									<div class="swiper-slide">
@@ -403,8 +403,8 @@
 									</div>
 								</div>
 								<!-- Add Arrows -->
-								<!-- <div class="swiper-button-next swiper-button-white"></div>
-            <div class="swiper-button-prev swiper-button-white"></div> -->
+								<div class="swiper-button-next swiper-button-white"></div>
+								<div class="swiper-button-prev swiper-button-white"></div>
 							</div>
 							<div class="swiper-container gallery-thumbs">
 								<div class="swiper-wrapper">
@@ -429,6 +429,8 @@
 							<span class="product-card__key">Код товара: 327944</span>
 							<span class="product-card__date">Обновление цен от 14 июля 2018</span>
 							<span class="product-card__price">122 750 <b>руб.</b>
+								<span class="price__absolute">122 750 <b>руб.</b>
+								</span>
 							</span>
 							<span class="catalog__presence product-card__presence">в наличии</span>
 							<div class="product-card__button">
@@ -488,9 +490,10 @@
 							<span class="product-card__model">De Dietrich DOM1195GX</span>
 							<span class="product-card__key">Код товара: 327944</span>
 							<span class="product-card__date">Обновление цен от 14 июля 2018</span>
-							<span class="product-card__price">122 750 <b>руб.</b>
+							<span class="product-card__price grey">122 750 <b>руб.</b>
+								<span class="delivery-time">Ожидаемый срок поставки 25 августа 2018</span>
 							</span>
-							<span class="catalog__presence product-card__presence">в наличии</span>
+							<span class="catalog__presence product-card__presence grey">нет в наличии</span>
 							<div class="product-card__button">
 								<a href="" class="product-card__buy">купить</a>
 								<a href="" class="product-card__icons">
@@ -509,8 +512,6 @@
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<img src="images/product-card.jpg" srcset="images/product-card@2x.jpg 2x,images/product-card@3x.jpg 3x" class="special-offers__img catalog__img">
-										<div class="announcing announcing__new"></div>
-										<div class="announcing announcing_two announcing__hit"></div>
 									</div>
 									<div class="swiper-slide">
 										<img src="images/product-card_2.jpg" srcset="images/product-card_2@2x.jpg 2x,images/product-card_2@3x.jpg 3x" class="special-offers__img catalog__img">
@@ -548,14 +549,11 @@
 							<span class="product-card__model">De Dietrich DOM1195GX</span>
 							<span class="product-card__key">Код товара: 327944</span>
 							<span class="product-card__date">Обновление цен от 14 июля 2018</span>
-							<span class="product-card__price">122 750 <b>руб.</b>
+							<span class="product-card__price"><b>Снять с производства</b>
 							</span>
-							<span class="catalog__presence product-card__presence">в наличии</span>
-							<div class="product-card__button">
-								<a href="" class="product-card__buy">купить</a>
-								<a href="" class="product-card__icons">
-									<span href="" class="product-card__match">Добавить к сравнению</span>
-								</a>
+							<span class="catalog__presence product-card__presence"></span>
+							<div class="product-card__button remove">
+								<a href="" class="product-card__buy">посмотреть аналогичные товары</a>
 							</div>
 							<div class="product-card__description">
 								<span class="description__title">Описание</span>
@@ -755,6 +753,7 @@
 	</div>
 	<!-- /.footer -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script>
 		window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')
 	</script>

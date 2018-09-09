@@ -119,10 +119,11 @@
   &__slider {
     border: none;
     border-radius: 3px;
-    height: 18px;
+    height: 6px;
     display: flex;
     align-items: center;
     position: relative;
+    background: url('../images/slider.png') repeat-x;
 
     .ui-slider-range {
       position: absolute;
@@ -131,7 +132,6 @@
       display: block;
       border: 0;
       background-position: 0 0;
-      width: 95%;
       height: 4px;
       border-radius: 2px;
       background-color: #aa6e4f;
@@ -212,3 +212,6 @@
     border-bottom: 1px dashed #aa6e4f;
   }
 }
+
+
+

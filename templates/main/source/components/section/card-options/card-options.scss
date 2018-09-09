@@ -163,11 +163,47 @@
         letter-spacing: normal;
         text-align: left;
         color: #2e2e2e;
+        position: relative;
 
         b {
             font-size: 24px;
             line-height: 1;
         }
+
+        .price__absolute {
+            position: absolute;
+            font-size: 18px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            text-align: left;
+            color: #b0b0b0;
+            left: 0;
+            top: -30px;
+            text-decoration: line-through;
+        }
+
+        .delivery-time {
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.57;
+            letter-spacing: normal;
+            text-align: left;
+            color: #ff3737;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 196px;
+            height: 44px;
+        }
+    }
+
+    .grey {
+        color: #666666;
     }
 
     &__presence {
@@ -628,6 +664,7 @@
         .swiper-slide {
             box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0);
         }
+
         .swiper-slide:hover {
             box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.14);
         }

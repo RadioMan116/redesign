@@ -181,8 +181,8 @@
         display: flex;
         align-items: center;
         flex-grow: 1;
-        justify-content: space-between;
         margin-bottom: 42px;
+        justify-content: flex-start;
     }
 
     &__buy {
@@ -205,6 +205,7 @@
     &__icons {
         background: url("../images/compare__color.svg") 0 /24px no-repeat;
         padding-left: 30px;
+        margin-left: 10%;
     }
 
     &__match {
