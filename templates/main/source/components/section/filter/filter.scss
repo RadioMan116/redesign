@@ -22,6 +22,8 @@
     background-color: #ffffff;
     padding: 16px 20px 25px;
     transition: 0.4s;
+    display: flex;
+    flex-wrap: wrap;
 
     &:hover {
       box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.14);
@@ -84,6 +86,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #2e2e2e;
+    background: url("https://icongr.am/entypo/chevron-up.svg?color=d6d6d6") 97%/18px no-repeat;
   }
 
   &__container {}
@@ -117,6 +120,7 @@
   }
 
   &__slider {
+    width: 90%;
     border: none;
     border-radius: 3px;
     height: 6px;
@@ -124,6 +128,7 @@
     align-items: center;
     position: relative;
     background: url('../images/slider.png') repeat-x;
+    margin-left: 3%;
 
     .ui-slider-range {
       position: absolute;
@@ -148,12 +153,6 @@
       position: absolute;
       z-index: 1;
     }
-  }
-
-  &__line {
-    height: 1px;
-    background-color: #eeeeee;
-    margin: 16px 0;
   }
 
   &__checkbox {
@@ -187,10 +186,11 @@
       font-stretch: normal;
       line-height: normal;
       letter-spacing: normal;
-      text-align: left;
+      text-align: center;
       color: #aa6e4f;
       font-family: 'Gotham Pro Medium';
-      padding: 14px 74px;
+      padding: 14px 0;
+      width: 100%;
       border-radius: 2px;
       border: solid 1px #aa6e4f;
       text-transform: uppercase;
@@ -211,7 +211,64 @@
     text-transform: uppercase;
     border-bottom: 1px dashed #aa6e4f;
   }
+
+  &__item {
+    overflow: hidden;
+    height: unset;
+    border-bottom: 1px solid #eeeeee;
+    padding: 16px 0 24px;
+  }
+
+  &__close {
+    flex-grow: 1;
+    height: 50px;
+    width: 100%;
+
+    * {
+      display: none;
+    }
+
+    .filter__title {
+      display: block;
+      background: url("https://icongr.am/entypo/chevron-down.svg?color=d6d6d6") 97%/18px no-repeat;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    &__item {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      width: 100%;
+    }
+    &__price {
+      width: 50%;
+      margin: 0;
+      padding-left: 10px;
+      input{
+        margin-left: -65px;
+      }
+    }
+    &__slider {
+      width: 40%;
+    }
+    &__checkbox {
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      label {
+        width: 50%;
+      }
+    }
+  }
 }
-
-
-

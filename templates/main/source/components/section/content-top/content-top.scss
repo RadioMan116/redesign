@@ -89,4 +89,14 @@
             }
         }
     }
+
+    @media screen and (max-width: 1024px) {
+        .tags {
+            height: unset;
+            &__list {
+                flex-wrap: wrap;
+                padding: 9px 23px 14px;
+            }
+        }
+    }
 }

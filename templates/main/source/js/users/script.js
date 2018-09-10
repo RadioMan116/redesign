@@ -149,6 +149,12 @@ $(document).ready(function () {
     $(".header__overlay").show();
     return false;
   });
+  $(".special-offers__buy,.product-card__buy").click(function (event) {
+    event.preventDefault();
+    $(".added-cart_popup").css("display", "flex");
+    $(".header__overlay").show();
+    return false;
+  });
   $(".js-modal-close").click(function (event) {
     event.preventDefault();
     $(".popup_container").hide();
@@ -214,6 +220,13 @@ $(document).ready(function () {
     } else {
       $(".tabs__li").removeClass("active");
       $(this).addClass("active");
+    }
+  });
+  $(".filter__item").click(function (e) {
+    if ($(this).hasClass("filter__close") == false) {
+      $(this).addClass("filter__close");
+    } else {
+      $(this).removeClass("filter__close");
     }
   });
   $(".js-characteristic").click(function (event) {

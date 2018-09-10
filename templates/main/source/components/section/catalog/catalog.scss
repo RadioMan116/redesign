@@ -303,7 +303,12 @@
             font-family: "Gotham Pro";
         }
     }
+
+    @media screen and (max-width: 768px) {
+        
+    }
 }
+
 .reviews {
     &__title {
         font-family: "Gotham Pro Medium";
@@ -457,4 +462,6 @@
             background-size: 21px 20px;
         }
     }
+
+    @media screen and (max-width: 768px) {}
 }
