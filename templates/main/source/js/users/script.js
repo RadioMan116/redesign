@@ -153,6 +153,7 @@ $(document).ready(function () {
     event.preventDefault();
     $(".added-cart_popup").css("display", "flex");
     $(".header__overlay").show();
+    $("html").addClass("fixed");
     return false;
   });
   $(".js-modal-close").click(function (event) {
@@ -236,6 +237,13 @@ $(document).ready(function () {
   $(".js-delivery").click(function (event) {
     $(".hide-tabs__characteristic").hide();
     $(".hide-tabs__delivery").show();
+  });
+  $(".close__filter").click(function () {
+    if ($('.filter__form').hasClass("closed") == false) {
+      $(".filter__form").addClass("closed");
+    } else {
+      $(".filter__form").removeClass("closed");
+    }
   });
 
   // слайдеры для фильтра

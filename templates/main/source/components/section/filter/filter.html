@@ -1,6 +1,6 @@
 <div class="filter">
     <div class="filter__date">Обновление цен от 14 июля 2018 </div>
-    <form class="filter__form" action="" method="get" id="products-filter">
+    <form class="filter__form closed" action="" method="get" id="products-filter">
         <input type="hidden" name="F[SET_FILTER]" id="SET_FILTER" value="Y">
         <div class="filter__item">
             <div class="filter__title">Цена, руб.</div>
@@ -112,12 +112,14 @@
                 </label>
             </div>
         </div>
-
-
-
-
-
-        <div class="filter__line"></div>
+        <div class="filter__item item__close">
+            <span class="close__filter">
+                Открыть фильтр
+            </span>
+            <span class="close__filter">
+                X  Закрыть фильтр
+            </span>
+        </div>
         <div class="filter__button">
             <input type="submit" name="" value="Показать" class="btn-sub">
             <span class="filter_reset" id="filter_reset">Сбросить фильтр</span>

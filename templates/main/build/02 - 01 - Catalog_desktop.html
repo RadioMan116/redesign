@@ -385,7 +385,7 @@
 				<div class="container">
 					<div class="filter">
 						<div class="filter__date">Обновление цен от 14 июля 2018</div>
-						<form class="filter__form" action="" method="get" id="products-filter">
+						<form class="filter__form closed" action="" method="get" id="products-filter">
 							<input type="hidden" name="F[SET_FILTER]" id="SET_FILTER" value="Y">
 							<div class="filter__item">
 								<div class="filter__title">Цена, руб.</div>
@@ -495,12 +495,14 @@
 									</label>
 								</div>
 							</div>
-
-
-
-
-
-							<div class="filter__line"></div>
+							<div class="filter__item item__close">
+								<span class="close__filter">
+									Открыть фильтр
+								</span>
+								<span class="close__filter">
+									X Закрыть фильтр
+								</span>
+							</div>
 							<div class="filter__button">
 								<input type="submit" name="" value="Показать" class="btn-sub">
 								<span class="filter_reset" id="filter_reset">Сбросить фильтр</span>
@@ -534,7 +536,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="catalog main__catalog">
+					<div class="catalog main__catalog special-offers">
 						<div class="popup_container added-cart_popup">
 							<a href="#" class="modal__close js-modal-close" onclick="return mnt.overlay.closePopup({popupID:'callback_popup'});" title="Закрыть">×</a>
 							<span class="title-strike abuse__title">Товар добавлен в корзину</span>
@@ -550,7 +552,7 @@
 									<span class="added-cart__presence">в наличии</span>
 								</div>
 								<div class="added-cart__button">
-									<a href="#" id="added-cart__back" class="added-cart__back" class="js-modal-close">Продолжить покупки</a>
+									<a href="#" id="added-cart__back" class="added-cart__back js-modal-close">Продолжить покупки</a>
 									<a class="added-cart__order" href="#">Перейти к оформлению</a>
 									<br>
 								</div>

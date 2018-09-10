@@ -99,4 +99,19 @@
             }
         }
     }
+    @media screen and (max-width: 600px) {
+        .page__title {
+            font-size: 32px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.38;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+        }
+        .content-top__title_top {
+            display: none;
+        }
+    }
 }
