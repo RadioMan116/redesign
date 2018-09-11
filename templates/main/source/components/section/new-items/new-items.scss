@@ -68,6 +68,9 @@
         .new-items__how {
             margin-bottom: 24px;
         }
+        .swiper-slide{
+            align-content: flex-end;
+        }
     }
     @media screen and (max-width: 375px) {
         .swiper-pagination_3 {

@@ -266,7 +266,8 @@
       }
 
       .item__close {
-        display: block;
+        display: flex;
+        align-items: center;
         position: absolute;
         left: 15px;
         top: 0;
@@ -408,7 +409,8 @@
       // justify-content: center;
       // align-items: center;
       // flex-wrap: wrap;
-    display: flex;
+      display: flex;
+      flex-direction: column;
 
       input {
         width: 240px;
@@ -419,7 +421,7 @@
 
       span {
         width: 127px;
-        margin: 20px 33%;
+        margin: 20px auto;
         min-width: 127px;
         white-space: nowrap;
       }
@@ -430,9 +432,25 @@
       padding: 0;
     }
 
+    .filter__form {
+      position: relative;
+    }
+
+    .filter__button {
+      padding-top: 19px;
+      padding-bottom: 19px;
+    }
+
+    .item__close {
+      position: absolute;
+      bottom: 0;
+      padding: 0 !important;
+      left: 0;
+    }
+
     .close__filter:last-child {
       width: 100%;
-      margin: 20px auto;
+      margin: 5px auto;
       position: unset;
       /* min-width: 127px; */
       white-space: nowrap;
