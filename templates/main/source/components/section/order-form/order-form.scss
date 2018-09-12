@@ -1,0 +1,130 @@
+.order-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+    .navchain {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        width: 100%;
+        margin: 4px 0 32px;
+        font-family: 'Gotham Pro Medium';
+        font-size: 36px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #262626;
+    }
+
+    .table {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__title,
+        &__items,
+        &__total {
+            width: 100%;
+            padding: 10px 24px
+        }
+
+        &__title {
+            display: flex;
+            background-color: #eeeeee;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2;
+            letter-spacing: normal;
+            text-align: left;
+            color: #2e2e2e;
+        }
+
+        &__items {
+            display: flex;
+            background-color: #ffffff;
+            border-left: solid 1px #eeeeee;
+            border-bottom: solid 1px #eeeeee;
+            border-right: solid 1px #eeeeee;
+            max-height: 125px;
+        }
+
+        &__link {
+            display: flex;
+            max-width: 120px;
+            max-height: 120px;
+        }
+
+        .title__span,
+        .table__item {
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 20%;
+            align-items: center;
+            display: flex;
+
+            strong {
+                font-size: 16px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                color: #2e2e2e;
+                font-family: 'Gotham Pro Medium';
+            }
+        }
+
+        .name {
+            flex-grow: 3;
+            display: flex;
+            flex: 1 1 40%;
+        }
+
+        &__text {
+            padding-left: 5%;
+        }
+
+        .how-many {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin: 0 5px;
+            }
+
+            input {
+                width: 33%;
+                border: 0;
+                outline: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                color: #2e2e2e;
+                font-family: 'Gotham Pro Medium';
+            }
+        }
+
+        .special-offers__text {
+            max-height: unset;
+            height: unset;
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+    }
+}
