@@ -31,17 +31,20 @@
                 </div>
             </div>
             <div class="table__item how-many">
+                <span class="table__title">Количество, шт</span>
                 <a href="#" class="decr qt_minus">-</a>
                 <input type="text" name="" value="10" class="qt_num">
                 <a href="#" class="incr qt_plus">+</a>
             </div>
             <div class="table__item price">
+                <span class="table__title">Цена</span>
                 <strong class="strong__price">134 200 руб.</strong>
             </div>
             <div class="table__item amount">
+                <span class="table__title">Сумма</span>
                 <strong class="strong__amount">134 200 руб.</strong>
             </div>
-            <a href="#" class="delete_basket" itemid="715903"></a>
+            <a href="#" class="delete__table" itemid="715903">Удалить</a>
         </div>
         <div class="table__items">
             <div class="table__item name">
@@ -55,30 +58,34 @@
                 </div>
             </div>
             <div class="table__item how-many">
+                <span class="table__title">Количество, шт</span>
                 <a href="#" class="decr qt_minus">-</a>
                 <input type="text" name="" value="10" class="qt_num">
                 <a href="#" class="incr qt_plus">+</a>
             </div>
             <div class="table__item price">
+                <span class="table__title">Цена</span>
                 <strong class="strong__price">115 000 руб.</strong>
             </div>
             <div class="table__item amount">
+                <span class="table__title">Сумма</span>
                 <strong class="strong__amount">230 000 руб.</strong>
             </div>
+            <a href="#" class="delete__table" itemid="715903">Удалить</a>
         </div>
         <div class="table__total">
             Итого:<strong>349 500 руб.</strong>
         </div>
-        <a href="#" class="delete_basket" itemid="715903"></a>
     </div>
     <div class="special-offers">
-        <span class="special-offers__title">Специальные предложения</span>
+        <span class="special-offers__title">Не забудьте купить</span>
         <!-- Slider main container -->
         <div class="swiper-container swiper-container-two">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper special-offers__wrapper">
                 <div class="swiper-slide special-offers__slide">
-                    <img src="images/foto_1.jpg" srcset="images/foto_1@2x.jpg 2x,images/foto_1@3x.jpg 3x" class="special-offers__img">
+                    <img src="images/Do-not-forget.jpg" srcset="images/Do-not-forget@2x.jpg 2x,images/Do-not-forget@3x.jpg 3x"
+                        class="special-offers__img">
                     <a href="#" class="special-offers__text">90cm Curved Decorative Hood</a>
                     <div class="special-offers__sale">
                         <span class="special-offers__price">134 200<i class="special-offers__rub">руб.</i></span>
@@ -90,7 +97,8 @@
                     </div>
                 </div>
                 <div class="swiper-slide special-offers__slide">
-                    <img src="images/foto_2.jpg" srcset="images/foto_2@2x.jpg 2x,images/foto_2@3x.jpg 3x" class="special-offers__img">
+                    <img src="images/Do-not-forget__2.jpg" srcset="images/Do-not-forget__2@2x.jpg 2x,images/Do-not-forget__2@3x.jpg 3x"
+                        class="special-offers__img">
                     <a href="#" class="special-offers__text">60cm 4 Burner Gas on Glass Hob</a>
                     <div class="special-offers__sale">
                         <span class="special-offers__price">98 400<i class="special-offers__rub">руб.</i></span>
@@ -102,7 +110,8 @@
                     </div>
                 </div>
                 <div class="swiper-slide special-offers__slide">
-                    <img src="images/foto_3.jpg" srcset="images/foto_3@2x.jpg 2x,images/foto_3@3x.jpg 3x" class="special-offers__img">
+                    <img src="images/Do-not-forget__3.jpg" srcset="images/Do-not-forget__3@2x.jpg 2x,images/Do-not-forget__3@3x.jpg 3x"
+                        class="special-offers__img">
                     <a href="#" class="special-offers__text">38cm Domino Hob Single 6.1kW Triple Burner</a>
                     <div class="special-offers__sale">
                         <span class="special-offers__price">115 000<i class="special-offers__rub">руб.</i></span>
@@ -114,7 +123,8 @@
                     </div>
                 </div>
                 <div class="swiper-slide special-offers__slide">
-                    <img src="images/foto_4.jpg" srcset="images/foto_4@2x.jpg 2x,images/foto_4@3x.jpg 3x" class="special-offers__img">
+                    <img src="images/Do-not-forget__4.jpg" srcset="images/Do-not-forget__4@2x.jpg 2x,images/Do-not-forget__4@3x.jpg 3x"
+                        class="special-offers__img">
                     <a href="#" class="special-offers__text">90cm Vertical Decorative Hood Grey</a>
                     <div class="special-offers__sale">
                         <span class="special-offers__price">134 200<i class="special-offers__rub">руб.</i></span>
@@ -136,48 +146,69 @@
         <div class="swiper-button-prev special-offers_prev"></div>
         <div class="swiper-button-next special-offers_next"></div>
     </div>
-    <form action="/cart/" method="POST" name="ORDER_FORM" id="ORDER_FORM">
+    <div class="border"></div>
+    <form action="/cart/" method="POST" name="ORDER_FORM" id="ORDER_FORM" class="form__payment">
+        <span class="form__title">Доставка</span>
+        <a class="delivery_terms" href="/shipping_and_payment/" target="_blank">Условия доставки<i></i></a>
         <input type="hidden" name="sessid" id="sessid" value="0764b7ac9495fd87937ecc63a5bbf108">
         <input type="hidden" name="confirmorder" id="confirmorder" value="Y">
         <input type="hidden" name="profile_change" id="profile_change" value="N">
         <input type="hidden" name="is_ajax_post" id="is_ajax_post" value="Y">
         <input type="hidden" name="PERSON_TYPE" value="16">
         <input type="hidden" name="PERSON_TYPE_OLD" value="16">
-        <label>Вас зовут&nbsp;<span class="sof-req">*</span></label>
-        <input type="text" maxlength="250" size="0" value="" name="ORDER_PROP_269" id="ORDER_PROP_269" class="">
-        <label>Телефон&nbsp;<span class="sof-req">*</span></label>
-        <input type="text" maxlength="250" size="0" value="" name="ORDER_PROP_270" id="ORDER_PROP_270" class="order_phone">
-        <label>E-mail&nbsp;<span class="sof-req">*</span></label>
-        <input type="text" maxlength="250" size="0" value="" name="ORDER_PROP_271" id="ORDER_PROP_271" class="">
-        <label>Желаемая дата доставки</label>
-        <input type="text" maxlength="250" size="0" value="" name="ORDER_PROP_274" id="DELIVERY_DATE" class="">
-        <label>Адрес доставки&nbsp;<span class="sof-req">*</span></label>
-        <textarea rows="4" cols="40" name="ORDER_PROP_272" id="ORDER_PROP_272"></textarea>
-        <input type="hidden" value="" name="ORDER_PROP_273" id="TRACKCODE">
-        <label>Лифт</label>
-        <select name="ORDER_PROP_388" id="ORDER_PROP_388" size="1">
-            <option value="грузовой" selected="">Грузовой</option>
-            <option value="пассажирский">Пассажирский</option>
-            <option value="нет">Нет</option>
-        </select>
-        <label>Этаж</label>
-        <input type="text" maxlength="250" size="0" value="" name="ORDER_PROP_391" id="ORDER_PROP_391" class="">
-        <input type="hidden" name="PAY_SYSTEM_ID" value="1">
-        <input type="submit" name="submitbutton" onclick="if(!$(this).hasClass('disabledSubmit')) return submitForm('Y');"
-            value="">
-        <br><br>
+        <div class="form__row">
+            <label>Вас зовут&nbsp;<span class="sof-req">*</span></label>
+            <input type="text" maxlength="250" size="0" value="" name="ORDER_PROP_269" id="ORDER_PROP_269" class="">
+        </div>
+        <div class="form__row">
+            <label>Телефон&nbsp;<span class="sof-req">*</span></label>
+            <input type="tel" maxlength="250" size="0" value="" name="ORDER_PROP_270" id="ORDER_PROP_270" class="order_phone">
+        </div>
+        <div class="form__row">
+            <label>E-mail&nbsp;<span class="sof-req">*</span></label>
+            <input type="email" maxlength="250" size="0" value="" name="ORDER_PROP_271" id="ORDER_PROP_271" class="">
+        </div>
+        <div class="form__row">
+            <label>Желаемая дата доставки</label>
+            <input type="text" maxlength="250" size="0" value="" name="ORDER_PROP_274" id="DELIVERY_DATE" class="">
+        </div>
+        <div class="form__row">
+            <label>Адрес доставки&nbsp;<span class="sof-req">*</span></label>
+            <textarea rows="4" cols="40" name="ORDER_PROP_272" id="ORDER_PROP_272"></textarea>
+        </div>
+        <div class="form__row">
+            <input type="hidden" value="" name="ORDER_PROP_273" id="TRACKCODE">
+            <label>Лифт</label>
+            <select name="ORDER_PROP_388" id="ORDER_PROP_388" size="1">
+                <option value="грузовой" selected="">Грузовой</option>
+                <option value="пассажирский">Пассажирский</option>
+                <option value="нет">Нет</option>
+            </select>
+        </div>
+        <div class="form__row">
+            <label>Этаж</label>
+            <input type="text" maxlength="250" size="0" value="" name="ORDER_PROP_391" id="ORDER_PROP_391" class="">
+            <input type="hidden" name="PAY_SYSTEM_ID" value="1">
+
+        </div>
+        <div class="form__button">
+            <label>
+                <input class="checkbox filter_checkbox pers_data_check" type="checkbox" checked="">
+                <span class="checkbox-custom"></span>
+                <i class="icon-check"></i>Согласен с
+                <a target="_blank" href="/personal_data/">
+                    использованием персональных данных
+                </a>
+                для обработки обращения
+            </label>
+            <input type="submit" name="submitbutton" onclick="if(!$(this).hasClass('disabledSubmit')) return submitForm('Y');"
+                value="Оформить заказ">
+        </div>
+
         <!--<input class="pers_data_check ffield_validate  ffield_req" type="checkbox" title="Согласие" checked/>
 <label>Согласен с <a href="/personal_data/">использованием персональных данных</a> для обработки обращения</label>
 -->
 
-        <label>
-            <input class="checkbox filter_checkbox pers_data_check" type="checkbox" checked="">
-            <span class="checkbox-custom"></span>
-            <i class="icon-check"></i>Согласен с
-            <a target="_blank" href="/personal_data/">
-                использованием персональных данных
-            </a>
-            для обработки обращения
-        </label>
+
     </form>
 </div>
