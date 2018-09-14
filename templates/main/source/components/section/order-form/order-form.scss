@@ -143,6 +143,7 @@
             background: url("https://icongr.am/clarity/close.svg?color=c9cbca") center no-repeat;
             width: 24px;
             height: 100%;
+            color: transparent;
         }
 
         &__total {
@@ -182,7 +183,7 @@
         letter-spacing: normal;
         text-align: left;
         color: #2e2e2e;
-        font-family: 'Gotham Pro Medium';
+        font-family: "Gotham Pro Medium";
     }
 
     .swiper-slide {
@@ -190,7 +191,7 @@
         transition: 0.4s;
 
         &:hover {
-            box-shadow: 0 2px 25px 0 rgba(0, 0, 0, .14);
+            box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.14);
         }
 
         img {
@@ -206,7 +207,9 @@
     }
 
     .special-offers__text {
-        padding: 28px 0 46px
+        padding: 28px 0 46px;
+        height: unset;
+        max-height: unset;
     }
 
     .swiper-wrapper {
@@ -230,9 +233,10 @@
         display: flex;
         flex-wrap: wrap;
         padding-bottom: 80px;
+        max-width: 100%;
 
         label {
-            font-family: 'Gotham Pro Medium';
+            font-family: "Gotham Pro Medium";
             font-size: 14px;
             font-weight: normal;
             font-style: normal;
@@ -250,7 +254,7 @@
     }
 
     .form__title {
-        font-family: 'Gotham Pro Medium';
+        font-family: "Gotham Pro Medium";
         font-size: 26px;
         font-weight: 500;
         font-style: normal;
@@ -265,8 +269,6 @@
     }
 
     .delivery_terms {
-        position: absolute;
-        left: 300px;
         background: url("../images/delivery__picture.png") 0 /15px no-repeat;
         font-size: 14px;
         font-weight: normal;
@@ -277,6 +279,7 @@
         text-align: left;
         color: #2e2e2e;
         padding-left: 30px;
+        margin-left: 65px;
     }
 
     .form__row {
@@ -312,7 +315,7 @@
         }
     }
 
-    .table__title {
+    .item__title {
         display: none;
     }
 
@@ -373,7 +376,6 @@
 
             .name {
                 flex: 0 1 40%;
-
             }
 
             &__link {
@@ -391,7 +393,6 @@
         }
 
         .form__payment {
-
             label {
                 flex: 0 0 200px;
             }
@@ -426,6 +427,7 @@
                 border-top: 1px solid #eee;
                 flex-wrap: wrap;
                 max-height: unset;
+                padding: 16px 16px 43px;
             }
 
             .name {
@@ -435,15 +437,134 @@
             &__item {
                 flex-basis: unset !important;
                 width: 100%;
-
             }
 
-            .special-offers__text,.strong__price {
+            .special-offers__text,
+            .strong__price {
                 font-size: 14px;
                 font-weight: 500;
                 font-style: normal;
                 font-stretch: normal;
                 line-height: 1.71;
+                letter-spacing: normal;
+                text-align: left;
+                color: #2e2e2e;
+            }
+
+            .item__title {
+                display: flex;
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 2.33;
+                letter-spacing: normal;
+                text-align: left;
+                color: #2e2e2e;
+                flex: 0 1 50%;
+            }
+
+            .qt_num {
+                max-width: 60px;
+            }
+
+            .delete__table {
+                height: 24px;
+                top: unset;
+                bottom: 16px;
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 2;
+                letter-spacing: normal;
+                text-align: center;
+                color: #b0b0b0;
+                background: url("https://icongr.am/clarity/close.svg?size=20&color=c9cbca") 100% no-repeat;
+                width: unset;
+                padding-right: 25px;
+                display: flex;
+                right: 16px;
+            }
+
+            &__total {
+                font-size: 14px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.71;
+                letter-spacing: normal;
+                text-align: left;
+                color: #2e2e2e;
+
+                strong {
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.33;
+                    letter-spacing: normal;
+                    text-align: right;
+                    color: #2e2e2e;
+                }
+            }
+        }
+
+        .special-offers__title {
+            width: unset;
+            text-align: left;
+            margin: 0 0 40px;
+            font-size: 20px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #262626;
+        }
+
+        .special-offers__buy {
+            margin-left: 10px;
+        }
+
+        .special-offers__sale {
+            flex-wrap: nowrap;
+        }
+
+        .swiper-slide {
+            margin-left: -1%;
+
+        }
+
+        .form__button {
+            padding-left: 0;
+
+            label {
+                width: calc(100%-24px);
+                margin-left: 24px;
+            }
+            input{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .form__row {
+            flex-wrap: wrap;
+
+            input,
+            select {
+                max-width: unset;
+            }
+
+            label {
+                font-family: 'Gotham Pro';
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 2.29;
                 letter-spacing: normal;
                 text-align: left;
                 color: #2e2e2e;

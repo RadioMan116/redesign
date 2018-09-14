@@ -674,4 +674,21 @@
             box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.14);
         }
     }
+    @media screen and (max-width: 768px) {
+        &__price {
+            flex-wrap: wrap;
+            .delivery-time{
+                position:unset;
+                order: -1;
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        &__price {
+            .delivery-time{
+               text-align: center;
+            }
+        }
+    }
 }

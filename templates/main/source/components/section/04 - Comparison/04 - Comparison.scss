@@ -1,0 +1,87 @@
+.comparison {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__middle {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .tabs {
+    width: 25%;
+  }
+
+  .swiper-container {
+    width: 75%;
+  }
+
+  &__title {
+    width: 100%;
+    font-family: 'Gotham Pro Medium';
+    font-size: 36px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #262626;
+  }
+
+  &__inner {
+    padding: 17px 16px;
+    background-color: #eeeeee;
+  }
+
+  &-menu__title {
+    font-family: 'Gotham Pro Medium';
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    height: 30px;
+    margin: 16px 0 11px;
+    background: url('https://icongr.am/entypo/triangle-down.svg') white 95%/15px no-repeat;
+    border-radius: 2px;
+    border: solid 1px #d6d6d6;
+  }
+
+  &__item {
+    width: 256px;
+    height: auto;
+    opacity: 0;
+
+    &:first-child {
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    padding: 11px 14px;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+    position: relative;
+  }
+  &__button{
+    padding: 17px 16px;
+  }
+}
