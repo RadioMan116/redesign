@@ -82,21 +82,20 @@ $(document).ready(function () {
   });
   var mySwiper2 = new Swiper(".swiper-container-comparison", {
     slidesPerView: 3,
-    spaceBetween: 27,
-    slidesPerGroup: 4,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: ".swiper-pagination_2",
-      clickable: true
-    },
+    // loop: true,
+    // loopFillGroupWithBlank: true,
     navigation: {
       nextEl: ".special-offers_next",
       prevEl: ".special-offers_prev"
     },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+      draggable: true
+    },
     breakpoints: {
       // when window width is <= 320px
-      420: {
+      480: {
         slidesPerGroup: 1,
         slidesPerView: 1,
         spaceBetween: 0
@@ -106,12 +105,9 @@ $(document).ready(function () {
       700: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 20
       },
       768: {
-        slidesPerGroup: 3,
-        spaceBetween: 20,
-        slidesPerView: 3
+        slidesPerView: 2
       }
     }
   });
@@ -311,6 +307,21 @@ $(document).ready(function () {
       $(".filter__form").removeClass("closed");
     }
   });
+  $('.comparison .modal__close').click(function (event) {
+    event.preventDefault();
+    // $("this").closest("swiper-slide").remove();
+    $element = $(this).parent().remove();
+    return false;
+  })
+  $('.comparison__select').click(function(){
+    if ($(this).hasClass("active") == true) {
+      $(".comparison__select ").removeClass("active");
+      $(this).addClass("active");
+    } else {
+      $(".comparison__select ").removeClass("active");
+      $(this).addClass("active");
+    }
+  })
 
   // слайдеры для фильтра
   function SetSliders() {
