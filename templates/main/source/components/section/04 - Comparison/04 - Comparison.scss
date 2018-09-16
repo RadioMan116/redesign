@@ -3,6 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 69px;
+  position: relative;
+  padding-bottom: 30px;
+
+  .navchain {
+    margin-bottom: 5px;
+  }
 
   &__middle {
     display: flex;
@@ -16,13 +22,27 @@
     display: flex;
     flex-wrap: wrap;
     min-width: 290px;
-    ;
   }
 
   .swiper-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+
+    td {
+      border-right: solid 1px #f1f1f1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-align: left;
+      color: #2e2e2e;
+    }
   }
 
   .swiper-wrapper {
@@ -30,18 +50,23 @@
     display: flex;
   }
 
-  .swiper-slide {
-    flex: 1 1 25%;
+  .swiper-slide,
+  .swiper-block {
     padding-left: 17px;
     align-items: stretch;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: flex;
+    flex: 1 0 25%;
+    width: 25%;
   }
 
   .products-line {
     .swiper-slide {
       padding-left: 0;
+      align-items: baseline;
     }
+
 
     .swiper__comparison_first {
       padding: 0;
@@ -50,7 +75,7 @@
 
   &__title {
     width: 100%;
-    font-family: 'Gotham Pro Medium';
+    font-family: "Gotham Pro Medium";
     font-size: 36px;
     font-weight: 500;
     font-style: normal;
@@ -64,11 +89,11 @@
   &__inner {
     padding: 17px 16px;
     background-color: #eeeeee;
-    margin-right: 14px;
+    width: 96%;
   }
 
   &-menu__title {
-    font-family: 'Gotham Pro Medium';
+    font-family: "Gotham Pro Medium";
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -86,7 +111,7 @@
     padding: 0;
     height: 30px;
     margin: 16px 0 11px;
-    background: url('https://icongr.am/entypo/triangle-down.svg') white 95%/15px no-repeat;
+    background: url("https://icongr.am/entypo/triangle-down.svg") white 95%/15px no-repeat;
     border-radius: 2px;
 
     &:hover {
@@ -136,14 +161,16 @@
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;
-      line-height: 2;
+      line-height: 1;
       letter-spacing: normal;
       text-align: left;
       color: #2e2e2e;
+      margin: 5px 0;
     }
 
     .comparison__select {
       background: url("../images/mamka.png") 0 /15px no-repeat;
+
     }
 
     .comparison__select.active {
@@ -155,7 +182,6 @@
       color: #aa6e4f;
       margin-top: 30px;
     }
-
   }
 
   .characteristic {
@@ -172,21 +198,26 @@
       letter-spacing: normal;
       text-align: left;
       color: #2e2e2e;
-      font-family: 'Gotham Pro Medium';
+      font-family: "Gotham Pro Medium";
     }
 
     &__row {
-      background-color: #f8f8f8;
       width: 100%;
       cursor: pointer;
 
+      td {
+        background-color: #f8f8f8;
+      }
+
       &:nth-child(odd) {
-        background-color: #f3efec;
+        td {
+          background-color: #f3efec;
+        }
       }
     }
 
     &__property {
-      font-family: 'Gotham Pro';
+      font-family: "Gotham Pro";
       font-size: 14px;
       font-weight: normal;
       font-style: normal;
@@ -213,7 +244,6 @@
     }
   }
 
-
   .modal__close {
     position: absolute;
     top: 10px;
@@ -226,6 +256,9 @@
     padding: 25px 20px;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: baseline;
+    max-width: 100%;
 
     .special-offers__text {
       padding: 20px 0;
@@ -235,20 +268,21 @@
     }
   }
 
-
-  .swiper__comparison {}
+  .price__absolute {
+    top: -17px !important;
+  }
 
   .swiper-button-prev {
     background: url("../images/round-arrow-left.svg") 0/24px no-repeat;
     position: absolute;
-    top: -20px;
+    top: 40px;
     right: 100px;
     left: unset;
   }
 
   .swiper-button-next {
     background: url("../images/round-arrow-right.svg") 0/24px no-repeat;
-    top: -20px;
+    top: 40px;
     right: 50px;
   }
 
@@ -258,6 +292,10 @@
     height: 10px !important;
     border-radius: 8.5px;
     background-color: #e6e6e6;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
 
     &-drag {
       height: 10px;
@@ -266,10 +304,23 @@
     }
   }
 
+  .comparison__text {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+  }
+
   @media screen and (max-width: 768px) {
     .navchain {
       margin-bottom: 0;
     }
+
+    .comparison__button a {}
 
     &__title {
       margin-top: 10px;
@@ -283,6 +334,12 @@
       text-align: left;
       color: #262626;
       width: 30%;
+    }
+
+    .swiper-slide,
+    .swiper-block {
+      flex: 1 0 auto;
+      width: 33.3333333%;
     }
 
     &__inner {
@@ -303,13 +360,12 @@
       letter-spacing: normal;
       text-align: left;
       color: #2e2e2e;
-
     }
 
     .special-offers__buy {
       padding: 0;
       color: transparent;
-      background: url('https://icongr.am/entypo/shopping-cart.svg?color=ffffff') #aa6e4f no-repeat;
+      background: url("https://icongr.am/entypo/shopping-cart.svg?color=ffffff") #aa6e4f no-repeat;
       background-size: 18px;
       background-position: center 3px;
       width: unset;
@@ -321,7 +377,7 @@
       font-style: normal;
       font-stretch: normal;
       line-height: 1.2;
-      letter-spacing: normal;
+      letter-spacing: -1px;
       text-align: left;
       color: #2e2e2e;
     }
@@ -330,6 +386,49 @@
       font-size: 14px;
       line-height: 1.71;
     }
+  }
 
+  @media screen and (max-width: 600px) {
+
+    .swiper-slide,
+    .swiper-block {
+      flex: 1 0 50% !important;
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .products-line {
+      position: relative;
+      padding-top: 300px;
+
+      td:first-child {
+        position: absolute;
+        width: 100% !important;
+        top:0;
+      }
+    }
+
+    .characteristic__row {
+      position: relative;
+
+      .swiper-block:first-child {
+        position: absolute;
+        top: 0;
+        background: transparent;
+        width: 100%;
+        height: unset;
+        padding: 0 0 0 17px;
+        font-family: "Gotham Pro Medium";
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-align: left;
+        color: #2e2e2e;
+      }
+    }
   }
 }

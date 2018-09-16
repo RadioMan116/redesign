@@ -82,6 +82,7 @@ $(document).ready(function () {
   });
   var mySwiper2 = new Swiper(".swiper-container-comparison", {
     slidesPerView: 4,
+    slidesPerGroup: 4,
     // loop: true,
     // loopFillGroupWithBlank: true,
     navigation: {
@@ -94,23 +95,27 @@ $(document).ready(function () {
       draggable: true
     },
     breakpoints: {
-      // when window width is <= 320px
       480: {
-        slidesPerGroup: 1,
-        slidesPerView: 1,
+        slidesPerGroup: 2,
+        slidesPerView: 2,
         spaceBetween: 0
       },
-      // // when window width is <= 480px
-      // 480: {
-      700: {
-        slidesPerView: 2,
+      600: {
         slidesPerGroup: 2,
+        slidesPerView: 2
       },
       768: {
-        slidesPerView: 2
+        slidesPerGroup: 3,
+        slidesPerView: 3
       }
     }
   });
+  $(window).resize(function (){
+    var windowWidth = $(window).width();
+    if(windowWidth > 480)$(".products-line td").first().addClass("swiper-slide swiper-slide-active");
+    else $(".products-line td").first().removeClass("swiper-slide swiper-slide-active");
+  });
+  
   var mySwiper3 = new Swiper(".swiper-container-three", {
     slidesPerView: 4,
     spaceBetween: 27,
