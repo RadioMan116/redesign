@@ -81,7 +81,7 @@ $(document).ready(function () {
     }
   });
   var mySwiper2 = new Swiper(".swiper-container-comparison", {
-    slidesPerView: 3,
+    slidesPerView: 4,
     // loop: true,
     // loopFillGroupWithBlank: true,
     navigation: {

@@ -20,8 +20,32 @@
   }
 
   .swiper-container {
-    width: 75%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .swiper-wrapper {
+    height: auto;
+    display: flex;
+  }
+
+  .swiper-slide {
+    flex: 1 1 25%;
+    padding-left: 17px;
+    align-items: stretch;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .products-line {
+    .swiper-slide {
+      padding-left: 0;
+    }
+
+    .swiper__comparison_first {
+      padding: 0;
+    }
   }
 
   &__title {
@@ -134,19 +158,12 @@
 
   }
 
-  .tabs__characteristic {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 90px;
-  }
-
   .characteristic {
     &__title {
       height: 52px;
       display: flex;
       align-items: center;
       width: 100%;
-      padding-left: 17px;
       font-size: 16px;
       font-weight: 500;
       font-style: normal;
@@ -159,9 +176,7 @@
     }
 
     &__row {
-      min-height: 54px;
       background-color: #f8f8f8;
-      padding-left: 17px;
       width: 100%;
       cursor: pointer;
 
@@ -169,7 +184,8 @@
         background-color: #f3efec;
       }
     }
-    &__property{
+
+    &__property {
       font-family: 'Gotham Pro';
       font-size: 14px;
       font-weight: normal;
@@ -190,41 +206,37 @@
       letter-spacing: normal;
       text-align: left;
       color: #2e2e2e;
+      flex: 1 1 25%;
+      padding-left: 17px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
-  .swiper-slide {
-    padding: 0;
-    align-content: flex-start;
-    align-items: flex-start;
-    border-right: solid 1px #f1f1f1;
-    position: relative;
 
-    .modal__close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #b0b0b0;
-      font-size: 20px;
-    }
-
-    .swiper__comparison {
-      padding: 25px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-
-      .special-offers__text {
-        padding: 0;
-      }
-    }
+  .modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #b0b0b0;
+    font-size: 20px;
   }
 
   .swiper__comparison {
-    max-height: 400px;
-    height: 100%;
-    max-width: 100%;
+    padding: 25px 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .special-offers__text {
+      padding: 20px 0;
+      height: 100px;
+      display: flex;
+      max-height: unset;
+    }
   }
+
+
+  .swiper__comparison {}
 
   .swiper-button-prev {
     background: url("../images/round-arrow-left.svg") 0/24px no-repeat;
@@ -313,6 +325,7 @@
       text-align: left;
       color: #2e2e2e;
     }
+
     .special-offers__rub {
       font-size: 14px;
       line-height: 1.71;
