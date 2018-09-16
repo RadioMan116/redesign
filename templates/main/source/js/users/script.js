@@ -94,11 +94,16 @@ $(document).ready(function () {
       hide: false,
       draggable: true
     },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
     breakpoints: {
       480: {
         slidesPerGroup: 2,
         slidesPerView: 2,
         spaceBetween: 0
+        
       },
       600: {
         slidesPerGroup: 2,
