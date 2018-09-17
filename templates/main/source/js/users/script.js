@@ -55,6 +55,11 @@ $(document).ready(function () {
       el: ".swiper-pagination_2",
       clickable: true
     },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+      draggable: true
+    },
     navigation: {
       nextEl: ".special-offers_next",
       prevEl: ".special-offers_prev"
