@@ -108,7 +108,7 @@ $(document).ready(function () {
         slidesPerGroup: 2,
         slidesPerView: 2,
         spaceBetween: 0
-        
+
       },
       600: {
         slidesPerGroup: 2,
@@ -120,12 +120,11 @@ $(document).ready(function () {
       }
     }
   });
-  $(window).resize(function (){
+  $(window).resize(function () {
     var windowWidth = $(window).width();
-    if(windowWidth > 480)$(".products-line td").first().addClass("swiper-slide swiper-slide-active");
+    if (windowWidth > 480) $(".products-line td").first().addClass("swiper-slide swiper-slide-active");
     else $(".products-line td").first().removeClass("swiper-slide swiper-slide-active");
   });
-  
   var mySwiper3 = new Swiper(".swiper-container-three", {
     slidesPerView: 4,
     spaceBetween: 27,
@@ -190,7 +189,6 @@ $(document).ready(function () {
       }
     }
   });
-
   $(".js-header__search").click(function () {
     if ($(".search__popup").hasClass("search__popup-open") == false) {
       $(".header .search__popup").addClass("search__popup-open");
@@ -327,8 +325,8 @@ $(document).ready(function () {
     // $("this").closest("swiper-slide").remove();
     $element = $(this).parent().remove();
     return false;
-  })
-  $('.comparison__select').click(function(){
+  });
+  $('.comparison__select').click(function () {
     if ($(this).hasClass("active") == true) {
       $(".comparison__select ").removeClass("active");
       $(this).addClass("active");
@@ -336,8 +334,19 @@ $(document).ready(function () {
       $(".comparison__select ").removeClass("active");
       $(this).addClass("active");
     }
-  })
-
+  });
+  $('.help__row').click(function () {
+    if ($(this).hasClass('help__row-open') == false) {
+      $('.help__row').children(".help__info").hide();
+      $('.help__row').removeClass('help__row-open');
+      $(this).addClass('help__row-open');
+      $(this).children(".help__info").show();
+    } 
+    else {
+      $(this).removeClass('help__row-open');
+      $(this).children(".help__info").hide();
+    }
+  });
   // слайдеры для фильтра
   function SetSliders() {
     $("#products-filter div.slider_filter_range").each(function () {
