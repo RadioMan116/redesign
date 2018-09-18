@@ -24,7 +24,24 @@
 
   // &__text {}
 
-//   &__list {}
+  &__list {
+    font-size: 14px !important;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2e2e2e;
+    list-style-type: decimal !important;
+  }
 
-//   &__li {}
+  &__li {
+    padding-left: 15px;
+    margin-left: 1rem;
+
+    &::before {
+      display: none;
+    }
+  }
 }
