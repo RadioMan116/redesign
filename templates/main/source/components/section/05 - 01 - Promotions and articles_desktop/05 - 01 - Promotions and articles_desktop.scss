@@ -12,6 +12,10 @@
       display: flex;
       flex-wrap: wrap;
       margin: -23px -14px;
+
+      .sidebar {
+        display: none;
+      }
     }
 
     &__item {
@@ -25,6 +29,7 @@
     &__item {
       padding: 0 !important;
     }
+
     &__form {
       padding: 16px 20px;
     }
@@ -70,7 +75,141 @@
       }
     }
   }
-  .pagination{
+
+  .pagination {
     margin-top: 63px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .filter {
+      &__form {
+        height: unset !important;
+      }
+
+      &__item {
+        display: flex !important;
+      }
+
+      &__title {
+        background: url("../images/close__row.png") 92%/4rem no-repeat;
+      }
+
+      .filter__checkbox {
+        label {
+          align-items: center;
+        }
+
+        span {
+          margin-right: 10px;
+        }
+      }
+
+      &__close {
+        height: 35px;
+      }
+
+      .closed {
+        * {
+          display: flex;
+        }
+
+        input {
+          display: none;
+        }
+      }
+
+      .tags__item {
+        width: 33%;
+      }
+    }
+
+    .articles__items {
+      width: 100%;
+
+      .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: baseline;
+        align-items: flex-start;
+        order: 1;
+      }
+
+      .work-link,
+      .yandex,
+      .quality {
+        width: 33%;
+        height: 100%;
+      }
+
+      .yandex {
+        width: 31%;
+        margin: 0 1%;
+        padding: 2.5% 4.5% 3%;
+      }
+
+      .work-link {
+        padding-left: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 0;
+
+        &__item {
+          width: 100%;
+          align-items: center;
+        }
+      }
+    }
+   
+  }
+
+  @media screen and (max-width: 600px) {
+    .articles__item {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .filter {
+      .tags__item {
+        width: 100%;
+      }
+    }
+
+    .articles__item {
+      width: 100%;
+    }
+
+    .articles__items {
+      margin: 0;
+
+      .sidebar {
+
+        .work-link,
+        .yandex,
+        .quality {
+          width: 100%;
+          height: unset;
+        }
+
+        .yandex {
+          padding: 17px 24px;
+          margin: 16px 0;
+
+          img {
+            width: 100%;
+            max-width: 200px;
+          }
+
+          &__link {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
 }

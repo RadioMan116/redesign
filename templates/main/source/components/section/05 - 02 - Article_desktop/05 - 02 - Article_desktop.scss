@@ -8,6 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: baseline;
+    align-items: baseline;
   }
 
   .navchain {
@@ -15,7 +16,7 @@
   }
 
   &__title {
-    font-family: 'Gotham Pro Medium';
+    font-family: "Gotham Pro Medium";
     font-size: 36px;
     font-weight: 500;
     font-style: normal;
@@ -28,7 +29,7 @@
   }
 
   &__name {
-    font-family: 'Gotham Pro Medium';
+    font-family: "Gotham Pro Medium";
     font-size: 20px;
     font-weight: 500;
     font-style: normal;
@@ -52,9 +53,8 @@
     display: flex;
     flex-wrap: wrap;
 
-
     &_i {
-      font-family: 'Gotham Pro Medium';
+      font-family: "Gotham Pro Medium";
       font-size: 20px;
       font-weight: 500;
       font-style: normal;
@@ -282,7 +282,7 @@
     }
 
     &__all {
-      font-family: 'Gotham Pro Medium';
+      font-family: "Gotham Pro Medium";
       font-size: 26px;
       font-weight: 500;
       font-style: normal;
@@ -298,7 +298,7 @@
       width: 100% !important;
       font-weight: normal !important;
       line-height: 1.57 !important;
-      font-family: 'Gotham Pro' !important;
+      font-family: "Gotham Pro" !important;
     }
 
     &-list__field_header {
@@ -330,10 +330,21 @@
       margin-bottom: 24px;
       resize: none;
       padding: 15px 19px;
+      border-radius: 2px;
+      background-color: #ffffff;
+      border: solid 1px #cbcbcb;
     }
 
-    input::placeholder::after {
-      content: "s";
+    input::placeholder,
+    textarea::placeholder {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      text-align: left;
+      color: #666666;
     }
   }
 
@@ -344,5 +355,221 @@
   .add-comment__text {
     width: 50%;
     padding-left: 28px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .reviews {
+      max-width: 100%;
+    }
+
+    &__section {
+      width: 100%;
+    }
+
+    .articles__items {
+      display: none;
+    }
+
+    .articles-main__name {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.67;
+      letter-spacing: normal;
+      text-align: left;
+      color: #aa6e4f;
+    }
+
+    .articles-main__text {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.57;
+      letter-spacing: normal;
+      text-align: left;
+      color: #262626;
+
+      &_i {
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: left;
+        color: #2e2e2e;
+      }
+    }
+
+    .articles-main__title {
+      font-size: 30px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #262626;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .articles-main__title {
+      font-size: 24px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      text-align: left;
+      color: #262626;
+    }
+
+    .articles-main__name {
+      font-size: 16px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.63;
+      letter-spacing: normal;
+      text-align: left;
+      color: #aa6e4f;
+    }
+
+    .articles-main__text {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.57;
+      letter-spacing: normal;
+      text-align: left;
+      color: #262626;
+
+      &_i {
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #2e2e2e;
+      }
+    }
+
+    .swiper-pagination_2 {
+      display: flex;
+      bottom: 10px !important;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .swiper-scrollbar {
+      display: none !important;
+    }
+
+    .swiper-pagination-bullet {
+      margin: 0 5px;
+
+      &-active {
+        background: #aa6e4f !important;
+      }
+    }
+
+    .reviews__top {
+      padding: 0 !important;
+      justify-content: unset !important;
+
+    }
+
+    .reviews__section {
+      justify-content: flex-start !important;
+    }
+
+    .reviews__all {
+      font-size: 20px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #2e2e2e;
+    }
+
+    .reviews-list__field {
+      flex-wrap: nowrap !important;
+      align-items: baseline;
+    }
+
+    .reviews-list__col {
+      margin-right: 0;
+    }
+
+    .add-comment__text {
+      display: none;
+    }
+
+    .add-comment__row {
+
+      input,
+      textarea {
+        width: 100%;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 0;
+      }
+    }
+
+    .add-comment__name {
+      display: flex;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      text-align: left;
+      color: #666666;
+      align-items: baseline;
+
+      .abuse-popup__req {
+        font-size: 20px;
+      }
+    }
+
+    .add-comment__title {
+      font-size: 20px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #2e2e2e;
+      margin-bottom: 20px;
+    }
+
+    .add-comment__item {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .abuse-popup__submit {
+      width: 100%;
+    }
+
+    .add-comment__form {
+      border: 0;
+      margin-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
