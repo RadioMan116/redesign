@@ -11,6 +11,12 @@
   // &__header {}
 
   // &__text {}
+  &__price {
+    width: 77px;
+    margin-left: auto;
+    flex-shrink: 0;
+    padding-left: 10px;
+  }
 
   &__list {
     z-index: 99;
@@ -39,7 +45,9 @@
     text-align: left;
     font-family: "Gotham Pro";
     padding-left: 13px;
-    &:nth-child(odd){
+    display: flex;
+
+    &:nth-child(odd) {
       background-color: #f8f8f8;
     }
 
@@ -47,6 +55,22 @@
       display: none;
       content: "⯁";
       margin-right: 15px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .service__li {
+      flex-wrap: wrap;
+    }
+
+    .service__price {
+      width: 100%;
+      padding: 0;
+      color: #262626;
+      font-family: "Gotham Pro Medium";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 27px;
     }
   }
 }

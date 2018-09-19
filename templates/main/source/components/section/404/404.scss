@@ -1,0 +1,34 @@
+.alert-404 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 35px;
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+    position: relative;
+    justify-content: center;
+  }
+
+  &__button {
+    position: absolute;
+    width: 172px;
+    height: 46px;
+    border-radius: 2px;
+    background-color: #aa6e4f;
+    color: #ffffff;
+    font-family: "Gotham Pro Medium";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 130px;
+
+  }
+}

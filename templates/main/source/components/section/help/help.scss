@@ -76,4 +76,40 @@
     margin-top: 15px;
     display: none;
   }
+
+  @media screen and (max-width: 768px) {
+    .help__row {
+      color: #2e2e2e;
+      font-family: "Gotham Pro Medium";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      &-open {
+        color: #aa6e4f;
+      }
+    }
+
+    .help__info {
+      color: #2e2e2e;
+      font-family: "Gotham Pro";
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .help__row {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      &-open {
+        color: #aa6e4f;
+      }
+    }
+
+    .help__info {
+      font-family: "Gotham Pro";
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
 }
