@@ -252,6 +252,12 @@
 	}
 }
 
+.abuse-popup-container {
+	height: 100vh;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
 .popup_container {
 	position: fixed !important;
 	width: 572px;
@@ -286,51 +292,53 @@
 		padding: 16px 16px 23px;
 	}
 }
-	/* Скрываем реальный чекбокс */
-	.checkbox {
-		display: none;
-	}
 
-	/* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
-	.checkbox-custom {
-		position: relative;
-		/* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
-		width: 20px;
-		/* Обязательно задаем ширину */
-		height: 20px;
-		/* Обязательно задаем высоту */
-		border: 2px solid #ccc;
-		border-radius: 3px;
-	}
+/* Скрываем реальный чекбокс */
+.checkbox {
+	display: none;
+}
 
-	/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
-	.checkbox-custom,
-	.label {
-		display: inline-block;
-		vertical-align: middle;
-	}
+/* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
+.checkbox-custom {
+	position: relative;
+	/* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+	width: 20px;
+	/* Обязательно задаем ширину */
+	height: 20px;
+	/* Обязательно задаем высоту */
+	border: 2px solid #ccc;
+	border-radius: 3px;
+}
 
-	/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
-	.checkbox:checked+.checkbox-custom::before {
-		content: "";
-		/* Добавляем наш псевдоэлемент */
-		display: block;
-		/* Делаем его блочным элементом */
-		position: absolute;
-		/* Позиционируем его абсолютным образом */
-		/* Задаем расстояние от верхней, правой, нижней и левой границы */
-		top: 2px;
-		right: 2px;
-		bottom: 2px;
-		left: 2px;
-		background: #aa6e4f;
-		/* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
-		border-radius: 2px;
-	}
+/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+.checkbox-custom,
+.label {
+	display: inline-block;
+	vertical-align: middle;
+}
 
-	label {
-		width: 60%;
-	}
+/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+.checkbox:checked+.checkbox-custom::before {
+	content: "";
+	/* Добавляем наш псевдоэлемент */
+	display: block;
+	/* Делаем его блочным элементом */
+	position: absolute;
+	/* Позиционируем его абсолютным образом */
+	/* Задаем расстояние от верхней, правой, нижней и левой границы */
+	top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
+	background: #aa6e4f;
+	/* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+	border-radius: 2px;
+}
+
+label {
+	width: 60%;
+}
+
 .abuse {
 	&__title {
 		font-family: "Gotham Pro Medium";
@@ -392,7 +400,7 @@
 				color: #666666;
 			}
 
-		
+
 		}
 
 		&__name {
@@ -460,6 +468,7 @@
 					padding-right: 60px;
 				}
 			}
+
 			&__required {
 				margin-left: 0;
 			}
@@ -467,11 +476,13 @@
 			&__item {
 				height: unset;
 				flex-wrap: wrap;
+
 				label {
 					width: 90%;
-					padding-left: 25px; 
+					padding-left: 25px;
 				}
 			}
+
 			&__submit {
 				width: 100%;
 			}

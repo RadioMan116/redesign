@@ -19,7 +19,8 @@
       display: flex;
       align-items: center;
     }
-    a{
+
+    a {
       color: #aa6e4f;
     }
   }
@@ -77,5 +78,53 @@
   .return-exchange__textarea {
     width: 100%;
     padding: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    &__detail {
+      .return-exchange__input {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        text-align: left;
+        color: #666666;
+      }
+    }
+
+    &__form label {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__element {
+      width: 100%;
+      height: unset;
+    }
+
+    &__detail {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .return-exchange__name {
+      display: flex;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 2.29;
+      letter-spacing: normal;
+      text-align: left;
+      color: #2e2e2e;
+    }
+
+    .return-exchange__input::placeholder,.return-exchange__textarea::placeholder {
+      opacity: 0;
+    }
   }
 }

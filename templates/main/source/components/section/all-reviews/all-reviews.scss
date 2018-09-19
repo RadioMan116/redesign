@@ -10,7 +10,7 @@
     border: 1px solid #e3e3e3 !important;
     background-color: #ffffff;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: 100px !important;
     position: relative;
     justify-content: unset !important;
@@ -70,6 +70,28 @@
 
     &:hover {
       color: #aa6e4f;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .all-reviews__top{
+      height: unset !important;
+      min-height: 100px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .reviews__section{
+      .ratings,.all-reviews__text{
+        width: 50%;
+      }
+    }
+    .all-reviews__top-first{
+      .ratings{
+        width: 100% !important;
+      }
+    }
+    .reviews__section{
+      justify-content: end !important;
     }
   }
 }
