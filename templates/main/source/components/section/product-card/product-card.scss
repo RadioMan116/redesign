@@ -856,6 +856,10 @@
       width: 100%;
       justify-content: center;
 
+      .price__absolute {
+       left: unset;
+      }
+
       b {
         font-size: 18px;
         line-height: 1.33;

@@ -181,4 +181,23 @@
     opacity: 0;
     cursor: pointer
   }
+  @media screen and (max-width: 480px){
+    .return-exchange__attachment{
+      padding-left: 0;
+      label{
+        margin-left: 15px;
+      }
+      .abuse-popup__submit{
+        width: 100%;
+      }
+    }
+    .return-exchange__file{
+      margin-left: 0 !important;
+    }
+    .return-exchange__attachment__container{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

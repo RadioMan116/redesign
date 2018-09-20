@@ -23,6 +23,7 @@
       text-align: left;
       color: #262626;
       padding-left: 14px;
+      min-height: 42px;
     }
 
     input[type='submit'] {}
@@ -38,5 +39,16 @@
     width: 100%;
     margin-top: 24px;
     margin-bottom: 34px;
+  }
+
+  @media screen and (max-width: 480px) {
+    .search-found__form {
+      flex-wrap: wrap;
+    }
+
+    input[type='submit'] {
+      width: 100%;
+      margin-top: 20px;
+    }
   }
 }

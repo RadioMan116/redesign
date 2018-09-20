@@ -42,7 +42,8 @@ $(document).ready(function () {
 
     // And if we need scrollbar
     scrollbar: {
-      el: ".swiper-scrollbar"
+      el: ".swiper-scrollbar",
+      draggable: true
     }
   });
   var mySwiper2 = new Swiper(".swiper-container-two", {
@@ -85,7 +86,7 @@ $(document).ready(function () {
       }
     }
   });
-  var mySwiper2 = new Swiper(".swiper-container-comparison", {
+  var mySwiper5 = new Swiper(".swiper-container-comparison", {
     slidesPerView: 4,
     slidesPerGroup: 4,
     // loop: true,
@@ -320,12 +321,12 @@ $(document).ready(function () {
       $(".filter__form").removeClass("closed");
     }
   });
-  $('.comparison .modal__close').click(function (event) {
-    event.preventDefault();
-    // $("this").closest("swiper-slide").remove();
-    $element = $(this).parent().remove();
-    return false;
-  });
+  // $('.comparison .modal__close').click(function (event) {
+  //   event.preventDefault();
+  //   // $("this").closest("swiper-slide").remove();
+  //   $element = $(this).parent().remove();
+  //   return false;
+  // });
   $('.comparison__select').click(function () {
     if ($(this).hasClass("active") == true) {
       $(".comparison__select ").removeClass("active");
