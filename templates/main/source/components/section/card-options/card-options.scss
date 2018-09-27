@@ -45,7 +45,7 @@
         }
 
         .gallery-thumbs {
-           
+
             box-sizing: border-box;
             padding: 10px 0;
 
@@ -62,6 +62,7 @@
         .gallery-thumbs .swiper-slide-active {
             opacity: 1;
         }
+
         .swiper-container.gallery-top {
             background: -webkit-image-set(url("../images/romb.jpg") 1x,
                 url("../images/romb@2x.jpg") 2x,
@@ -72,7 +73,7 @@
         .gallery-top {
             margin-bottom: -50px;
 
-          
+
 
             .swiper-slide {
 
@@ -169,6 +170,10 @@
         text-align: left;
         color: #2e2e2e;
         position: relative;
+
+        &.color {
+            color: #aa6e4f;
+        }
 
         b {
             font-size: 24px;
@@ -674,20 +679,23 @@
             box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.14);
         }
     }
+
     @media screen and (max-width: 768px) {
         &__price {
             flex-wrap: wrap;
-            .delivery-time{
-                position:unset;
+
+            .delivery-time {
+                position: unset;
                 order: -1;
                 width: 100%;
             }
         }
     }
+
     @media screen and (max-width: 480px) {
         &__price {
-            .delivery-time{
-               text-align: center;
+            .delivery-time {
+                text-align: center;
             }
         }
     }

@@ -563,6 +563,10 @@
           text-align: left;
           color: #2e2e2e;
           margin-bottom: 11px;
+          margin-top: 24px;
+          &:first-child{
+            margin-top: 0;
+          }
         }
 
         &__row {

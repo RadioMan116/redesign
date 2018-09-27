@@ -472,9 +472,47 @@ $(document).ready(function () {
     galleryThumbs.push(new Swiper(this, {
       centeredSlides: true,
       spaceBetween: 32,
-      slidesPerView: 'auto',
+      slidesPerView: 4,
       touchRatio: 0.2,
       slideToClickedSlide: true,
+      // on: {
+      //   transitionStart: function () {
+      //     translate = this.getTranslate();
+      //     console.log('translate', translate);
+      //     slidesPerView = this.params.slidesPerView == 'auto ' ? this.slidesPerViewDynamic() : this.params.slidesPerView;
+      //     console.log(this, this.slidesPerView, this.slides.length);
+      //     if (this.slides.length <= slidesPerView) {
+      //       return;
+      //     }
+
+      //     var y = 0;
+      //     var z = 0;
+      //     var x = 0;
+
+      //     if (this.activeIndex > slidesPerView / 2) {
+      //       console.log(this.activeIndex);
+      //       translate = this.activeIndex == this.slides.length - 1 ? -this.snapGrid[this.snapGrid.length - 2] : this.translate;
+
+      //       if (this.isHorizontal()) {
+      //         x = this.params.rtl ? -translate : translate;
+      //       } else {
+      //         y = translate;
+      //       }
+
+      //       if (this.roundLengths) {
+      //         x = Math.floor(x);
+      //         y = Math.floor(y);
+      //       }
+      //     }
+
+      //     if (this.support.transforms3d) {
+      //       this.$wrapperEl.transform(("translate3d(" + x + "px, " + y + "px, " + z + "px)"));
+      //     } else {
+      //       this.$wrapperEl.transform(("translate(" + x + "px, " + y + "px)"));
+      //     }
+
+      //   }
+      // },
       breakpoints: {
         // when window width is <= 320px
         // 420: {

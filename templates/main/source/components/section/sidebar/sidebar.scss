@@ -133,6 +133,7 @@
         text-align: left;
         color: #2e2e2e;
         margin: 4px 0 11px;
+        width: 100%;
     }
     &__button {
         font-family: 'Gotham Pro Medium';
@@ -148,5 +149,6 @@
         padding: 7px 13px 5px 14px;
         border-radius: 2px;
         border: solid 1px #aa6e4f;
+        width: unset !important;
     }
 }

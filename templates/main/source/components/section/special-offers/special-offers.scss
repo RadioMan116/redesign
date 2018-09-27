@@ -109,8 +109,11 @@
     }
 
     &__buy {
-        height: 24px;
-        padding: 7px 22px 5px;
+        width: 96px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: 'Gotham Pro Medium';
         font-size: 12px;
         font-weight: 500;
@@ -177,6 +180,7 @@
             top: 20px;
             right: 50px;
         }
+
         &__text {
             font-size: 14px;
         }

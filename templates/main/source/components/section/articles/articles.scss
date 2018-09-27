@@ -1,9 +1,12 @@
 .articles {
-    padding: 48px 0 72px;
+    padding: 0 0 72px;
 
     .container {
         display: flex;
         flex-wrap: wrap;
+    }
+    .navchain{
+        margin-bottom: 0;
     }
 
     &__title {
