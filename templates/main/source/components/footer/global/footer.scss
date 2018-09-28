@@ -128,7 +128,9 @@
 		* {
 			transition: 0.3s;
 		}
-
+		.menu-footer__list-margin .menu-footer__title{
+			margin-top: 0 !important;
+		}
 		&__col {
 			width: 100% !important;
 			margin-bottom: 0 !important;
@@ -249,14 +251,17 @@
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
-		&-margin{
-			margin-top: 20px;
+
+		&-margin {
+			.menu-footer__title {
+				margin-top: 20px;
+			}
 		}
 	}
 }
 
 .abuse-popup-container {
-	height: 100vh;
+	// height: 100vh;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }

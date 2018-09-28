@@ -135,4 +135,9 @@
       max-width: unset;
     }
   }
+  @media screen and (max-width: 768px) {
+    .shipping-payment__title.articles-main__title {
+      margin-top: 15px;
+    }
+  }
 }

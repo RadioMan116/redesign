@@ -228,7 +228,7 @@
       font-size: 20px;
       font-weight: 500;
       line-height: 24px;
-      margin-top: 20px;
+      margin-top: 30px;
 
       &-color {
         color: #aa6e4f;
@@ -240,7 +240,7 @@
     }
 
     &__text {
-      margin-top: 15px;
+      margin-top: 30px;
       color: #2e2e2e;
       font-family: "Gotham Pro";
       font-size: 14px;
@@ -248,7 +248,7 @@
     }
 
     &__list {
-      margin-top: 15px;
+      // margin-top: -30px;
       color: #2e2e2e;
       font-family: "Gotham Pro Medium";
       font-size: 16px;
@@ -260,6 +260,10 @@
       color: #262626;
       font-family: "Gotham Pro";
       font-size: 14px;
+    }
+
+    &__item {
+      padding-bottom: 30px;
     }
   }
 

@@ -60,6 +60,23 @@
 
   @media screen and (max-width: 768px) {
     .service__li {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+    }
+
+    .service__price {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.93;
+      letter-spacing: normal;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .service__li {
       flex-wrap: wrap;
     }
 

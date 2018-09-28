@@ -148,12 +148,14 @@
     line-height: 1.67;
     letter-spacing: normal;
     text-align: left;
+    width: 100%;
     color: #2e2e2e;
   }
 
   &__bold {
     font-weight: 500;
     font-family: "Gotham Pro Medium";
+    margin-right: 5px;
   }
 
   &__existence {
@@ -390,6 +392,7 @@
           text-align: left;
           color: #aa6e4f;
         }
+
         .stock__link {
           width: 29px;
           height: 29px;
@@ -419,7 +422,7 @@
         padding: 5px;
         display: flex;
         flex-wrap: wrap;
-        padding-left: 20px;
+        padding-left: 5%;
         align-content: center;
       }
 
@@ -436,28 +439,36 @@
       margin-left: auto;
     }
   }
+
   @media screen and (max-width: 550px) {
     .catalog {
       &__item {
         width: calc(((100% / 12) * 6)-24px);
       }
     }
+
     .sorting__info {
       display: none;
     }
+
     .catalog__ul {
       flex-wrap: wrap;
     }
+
     .stock,
     .stock__info {
       padding: 0;
     }
+
     .sidebar {
       flex-wrap: wrap;
       justify-content: center;
       flex-direction: column;
       margin: 0 auto;
-      .work-link,.yandex,.quality {
+
+      .work-link,
+      .yandex,
+      .quality {
         max-width: 300px;
         flex-basis: 288px;
         width: unset;
@@ -465,36 +476,52 @@
         margin: 0 auto;
         height: unset;
         margin-bottom: 16px;
-      } 
+      }
+
+      .work-link {
+        padding-left: 20%;
+      }
     }
   }
+
   @media screen and (max-width: 480px) {
     .catalog {
       &__item {
         width: 100%;
         margin: 0;
       }
+
       &__text {
         height: unset;
         padding: 0;
       }
+
       &__li {
         margin-top: 15px;
+
         &:first-child {
           width: 100%;
           margin-left: 0;
         }
+
         &:nth-child(2) {
           margin-left: -73%;
         }
       }
     }
+
+    .stock {
+      display: none;
+    }
+
     .special-offers__buy {
       text-transform: uppercase;
     }
+
     .stock__info {
       padding: 20px;
     }
+
     .description__title,
     .reviews__title {
       font-size: 20px;
@@ -669,6 +696,7 @@
       height: unset;
       padding: 16px 24px;
     }
+
     .reviews__section {
       width: 100%;
       display: flex;
@@ -676,24 +704,35 @@
       justify-content: center;
       flex-wrap: wrap;
     }
+
     .reviews__link {
-        width: 80%;
-        text-align: center;
+      width: 80%;
+      text-align: center;
     }
+
     .ratings__star {
-        background-size: 100%;
+      background-size: 100%;
     }
-   
+
     .reviews-list {
       &__field {
         flex-wrap: wrap;
       }
+
       &__col[itemprop="author"] {
         width: 100%;
         margin-bottom: 12px;
       }
+
+      &__col {
+        margin-bottom: 15px;
+      }
+
       &__col_date {
-          margin-left: auto;
+        margin-left: auto;
+      }
+      &__item {
+        padding: 15px 0;
       }
     }
   }

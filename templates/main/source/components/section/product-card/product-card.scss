@@ -172,6 +172,7 @@
     b {
       font-size: 24px;
       line-height: 1;
+      margin-left: 5px;
     }
   }
 
@@ -189,6 +190,7 @@
     margin-bottom: 42px;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: 15px;
   }
 
   &__buy {
@@ -395,6 +397,7 @@
         margin-top: 24px;
         padding-bottom: 24px;
         border-bottom: 1px solid #f1f1f1;
+        max-width: 100%;
       }
 
       &__pic {
@@ -615,6 +618,8 @@
           letter-spacing: normal;
           text-align: left;
           color: #666666;
+          display: flex;
+          height: 150px;
         }
       }
     }
@@ -807,8 +812,9 @@
       }
 
       &__links {
-        margin-left: 0 !important;
+        margin-left: auto !important;
         padding: 5px 0;
+        flex-grow: 0 !important;
       }
 
       &__description {
@@ -1156,6 +1162,7 @@
           align-items: center;
           justify-content: center;
           margin-bottom: 8px;
+          height: 36px !important;
         }
       }
     }
@@ -1173,8 +1180,8 @@
       }
 
       &__section {
-        margin-top: 23px;
-        margin-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 23px;
       }
 
       &-list {
@@ -1197,13 +1204,13 @@
     .characteristic__row {
       height: unset !important;
       line-height: unset;
+      padding: 5px 0;
     }
 
     .characteristic__name,
     .characteristic__property,
     .characteristic__copyright {
       line-height: 1.29 !important;
-      letter-spacing: -1px !important;
     }
 
     .special-offers__title {

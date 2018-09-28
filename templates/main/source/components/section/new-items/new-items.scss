@@ -68,10 +68,17 @@
         .new-items__how {
             margin-bottom: 24px;
         }
-        .swiper-slide{
+
+        .swiper-slide {
             align-content: flex-end;
+
+            img {
+                max-width: 250px;
+                margin-top: 2rem;
+            }
         }
     }
+
     @media screen and (max-width: 375px) {
         .swiper-pagination_3 {
             display: flex;
@@ -79,15 +86,18 @@
             width: 100%;
             margin: 0 auto;
             justify-content: center;
-            *{
+
+            * {
                 margin: 0 5px;
             }
         }
+
         .new-items__link {
             margin-top: 68px;
         }
-        .swiper-pagination-bullet-active {
-            background: #aa6e4f !important;
+/*AGENT_SHEET*/
+       .swiper-pagination_3 .swiper-pagination-bullet-active {
+            background: #ffffff !important;
         }
     }
 }

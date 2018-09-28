@@ -4,9 +4,10 @@ img {
     max-width: 100%;
 }
 .fixed {
+    overflow: hidden;
     position: fixed;
-    top: 0;
     width: 100%;
+    height: 100%;
 }
 .swiper-container, .swiper-container-two, .swiper-container-three {
     margin: 0 auto;

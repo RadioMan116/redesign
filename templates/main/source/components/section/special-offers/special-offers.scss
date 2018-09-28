@@ -62,7 +62,7 @@
         width: 100%;
         margin-top: auto;
         flex-wrap: wrap;
-
+        align-items: center;
     }
 
     &__price {
@@ -80,7 +80,6 @@
         @media screen and (max-width: 1128px) {
             font-size: 18px;
             flex-shrink: 0;
-            letter-spacing: -2px;
         }
 
         @media screen and (max-width:1100px) {
@@ -167,7 +166,9 @@
                 color: transparent;
                 background: url('https://icongr.am/entypo/shopping-cart.svg?color=ffffff') #aa6e4f no-repeat;
                 background-size: 18px;
-                background-position: center 3px;
+                background-position: center;
+                width: 56px;
+                height: 36px;
             }
         }
 

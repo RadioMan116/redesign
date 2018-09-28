@@ -363,6 +363,9 @@
                 flex-basis: 18%;
                 align-items: center;
                 display: flex;
+                &.price {
+                    padding-left: 15px;
+                }
             }
 
             .how-many {
