@@ -489,7 +489,7 @@ $(document).ready(function() {
         navigation: {
           nextEl: this.querySelector(".swiper-button-next"),
           prevEl: this.querySelector(".swiper-button-prev")
-        },
+        }
       })
     );
   });
@@ -508,8 +508,9 @@ $(document).ready(function() {
         slidesPerView: 4,
         touchRatio: 0.2,
         slideToClickedSlide: true,
-       
+  
         breakpoints: {
+          
           // when window width is <= 320px
           // 420: {
           //   slidesPerGroup: 1,
@@ -524,7 +525,8 @@ $(document).ready(function() {
           //   spaceBetween: 20
           // },
           768: {
-            direction: "vertical"
+            direction: "vertical",
+            spaceBetween: 10
           }
         }
         

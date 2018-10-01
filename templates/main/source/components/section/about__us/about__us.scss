@@ -23,6 +23,52 @@
     justify-content: center;
     align-content: baseline;
     align-items: baseline;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &_first {
+      background: url('../images/about-us.png');
+      background-size: 100% 100%;
+    }
+
+    &_two {
+      background: url('../images/about-us__2.png');
+      background-size: 100% 100%;
+    }
+
+    &_three {
+      background: url('../images/about-us__3.png');
+      background-size: 100% 100%;
+    }
+
+    &_four {
+      background: url('../images/about-us__4.png');
+      background-size: 100% 100%;
+    }
+
+    &_five {
+      background: url('../images/about-us__5.png');
+      background-size: 100% 100%;
+    }
+
+    &_six {
+      background: url('../images/about-us__6.png');
+      background-size: 100% 100%;
+    }
+
+    &_seven {
+      background: url('../images/about-us__7.png');
+      background-size: 100% 100%;
+    }
+
+    &_eight {
+      background: url('../images/about-us__8.png');
+      background-size: 100% 100%;
+    }
+
+    img {
+      opacity: 0;
+    }
 
     &-absolute {
       .about-us__pic {
@@ -162,6 +208,28 @@
       margin-bottom: 0px;
     }
 
+    &__item {
+      &_two {
+        background: url('../images/about-us_768_2.png');
+        background-size: 100% 100%;
+      }
+
+      &_three {
+        background: url('../images/about-us_768_3.png');
+        background-size: 100% 100%;
+      }
+
+      &_four {
+        background: url('../images/about-us_768_4.png');
+        background-size: 100% 100%;
+      }
+
+      &_five {
+        background: url('../images/about-us_768_5.png');
+        background-size: 100% 100%;
+      }
+    }
+
     .about-us__title {
       color: #262626;
       font-family: "Gotham Pro Medium";
@@ -214,6 +282,27 @@
 
   @media screen and (max-width: 480px) {
 
+    &__item {
+      &_two {
+        background: url('../images/about-us_480_1.png');
+        background-size: 100% ;
+      }
+
+      &_three {
+        background: url('../images/about-us_480_2.png');
+        background-size: 100% 100%;
+      }
+
+      &_four {
+        background: url('../images/about-us_480_3.png');
+        background-size: 100% 100%;
+      }
+
+      &_five {
+        background: url('../images/about-us_480_4.png');
+        background-size: 100% 100%;
+      }
+    }
 
     .about-us__title {
       color: #262626;
@@ -254,6 +343,7 @@
       font-family: "Gotham Pro Medium";
       font-weight: 500;
     }
+
     .about-us__li {
       color: #262626;
       font-family: "Gotham Pro";

@@ -69,6 +69,9 @@
     .gallery-thumbs .swiper-slide {
       width: 25%;
       height: 100%;
+      iframe {
+        max-height:113px;
+      }
     }
 
     .gallery-thumbs .swiper-slide-active {
@@ -640,7 +643,8 @@
     }
 
     &__link {
-      margin-right: 27px;
+      margin-left: 27px;
+
     }
   }
 
@@ -756,6 +760,7 @@
 
       .swiper-slide {
         width: unset;
+       
       }
 
       .swiper-wrapper {
