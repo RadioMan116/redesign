@@ -480,6 +480,8 @@ $(document).ready(function() {
     var $this = $(this);
     galleryTop.push(
       new Swiper(this, {
+        loop:true,
+        loopedSlides: 5,
         pagination: {
           el: ".swiper-pagination",
           clickable: true
@@ -487,7 +489,7 @@ $(document).ready(function() {
         navigation: {
           nextEl: this.querySelector(".swiper-button-next"),
           prevEl: this.querySelector(".swiper-button-prev")
-        }
+        },
       })
     );
   });
@@ -496,50 +498,17 @@ $(document).ready(function() {
     var $this = $(this);
     galleryThumbs.push(
       new Swiper(this, {
+        slidesPerView: 4,
+        loop: true,
         freeMode: true,
-        centeredSlides: true,
+        loopedSlides: 5, //looped slides should be the same
+        // watchSlidesVisibility: true,
+        // watchSlidesProgress: true,
         spaceBetween: 32,
         slidesPerView: 4,
         touchRatio: 0.2,
         slideToClickedSlide: true,
-        on: {
-          transitionStart: function () {
-            translate = this.getTranslate();
-            console.log('translate', translate);
-            slidesPerView = this.params.slidesPerView == 'auto ' ? this.slidesPerViewDynamic() : this.params.slidesPerView;
-            console.log(this, this.slidesPerView, this.slides.length);
-            if (this.slides.length <= slidesPerView) {
-              return;
-            }
-
-            var y = 0;
-            var z = 0;
-            var x = 0;
-
-            if (this.activeIndex > slidesPerView / 2) {
-              console.log(this.activeIndex);
-              translate = this.activeIndex == this.slides.length - 1 ? -this.snapGrid[this.snapGrid.length - 2] : this.translate;
-
-              if (this.isHorizontal()) {
-                x = this.params.rtl ? -translate : translate;
-              } else {
-                y = translate;
-              }
-
-              if (this.roundLengths) {
-                x = Math.floor(x);
-                y = Math.floor(y);
-              }
-            }
-
-            if (this.support.transforms3d) {
-              this.$wrapperEl.transform(("translate3d(" + x + "px, " + y + "px, " + z + "px)"));
-            } else {
-              this.$wrapperEl.transform(("translate(" + x + "px, " + y + "px)"));
-            }
-
-          }
-        },
+       
         breakpoints: {
           // when window width is <= 320px
           // 420: {
@@ -558,43 +527,17 @@ $(document).ready(function() {
             direction: "vertical"
           }
         }
+        
       })
     );
   });
+  
 
   for (var i = 0; i < galleryTop.length; i++) {
     galleryTop[i].controller.control = galleryThumbs[i];
     galleryThumbs[i].controller.control = galleryTop[i];
   }
-  //   var galleryTop = new Swiper('.gallery-top', {
-  //     nextButton: '.swiper-button-next',
-  //     prevButton: '.swiper-button-prev',
-  //     spaceBetween: 10,
-  //   onSlideChangeEnd: function(swiper){
-  //         var activeIndex = swiper.activeIndex;
-  //         $(galleryThumbs.slides).removeClass('is-selected');
-  //         $(galleryThumbs.slides).eq(activeIndex).addClass('is-selected');
-  //         galleryThumbs.slideTo(activeIndex,500, false);
-
-  //     }
-
-  // });
-  // var galleryThumbs = new Swiper('.gallery-thumbs', {
-  //     spaceBetween: 10,
-  //     freeMode: true,
-  //     centeredSlides: false,
-  //     slidesPerView: 'auto',
-  //     touchRatio: 0.2,
-  //        onClick: function (swiper, event){
-  //         var clicked = swiper.clickedIndex
-  //         swiper.activeIndex = clicked; //don't need this
-  //         swiper.updateClasses() //don't need this
-  //         $(swiper.slides).removeClass('is-selected');
-  //         $(swiper.clickedSlide).addClass('is-selected');
-  //         galleryTop.slideTo(clicked,500, false);
-
-  //     }
-  // });
+  
 
   $(".product-card__description").click(function() {
     if ($(this).hasClass("closed") == false) {
@@ -621,4 +564,8 @@ $(document).ready(function() {
       $(".hide-tabs__delivery").removeClass("closed");
     }
   });
+
+
+
+  
 });

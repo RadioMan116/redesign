@@ -60,7 +60,9 @@
       padding: 10px 0;
 
       .swiper-wrapper {
-        padding-left: 86px;
+        // padding-left: 86px;
+        // transform: initial!important;
+        // margin-left: calc(-40% - 5px);
       }
     }
 
@@ -567,7 +569,8 @@
           color: #2e2e2e;
           margin-bottom: 11px;
           margin-top: 24px;
-          &:first-child{
+
+          &:first-child {
             margin-top: 0;
           }
         }
@@ -867,7 +870,7 @@
       justify-content: center;
 
       .price__absolute {
-       left: unset;
+        left: unset;
       }
 
       b {
