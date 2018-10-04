@@ -2,6 +2,11 @@
   width: calc(((100% / 12) * 3)-28px);
   margin-right: 28px;
 
+  input,
+  span {
+    cursor: pointer;
+  }
+
   &__date {
     height: 28px;
     display: flex;

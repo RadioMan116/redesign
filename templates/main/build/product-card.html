@@ -97,7 +97,7 @@
 							<nav>
 								<ul class="menu__list">
 									<li class="menu__item">
-										<a href="02 - 01 - Catalog_desktop.html" class="menu__link">Каталог</a>
+										<span class="menu__link js-menu">Каталог</span>
 									</li>
 									<li class="menu__item">
 										<a href="06 - 01 - About us_desktop.html" class="menu__link">De Dietrich</a>
@@ -109,10 +109,10 @@
 										<a href="06 - 03 - Service_desktop.html" class="menu__link">Сервис</a>
 									</li>
 									<li class="menu__item">
-										<a href="05 - 01 - Promotions and articles_desktop.html" class="menu__link">Гарантия</a>
+										<a href="06 - 04 - Promotions and articles_desktop.html" class="menu__link">Гарантия</a>
 									</li>
 									<li class="menu__item">
-										<a href="http://localhost:3000/05%20-%2001%20-%20Promotions%20and%20articles_desktop.html" class="menu__link">Статьи</a>
+										<a href="05 - 02 - Article_desktop.html" class="menu__link">Статьи</a>
 									</li>
 									<li class="menu__item">
 										<a href="06 - 05 - Help_desktop" class="menu__link">Помощь</a>
@@ -181,7 +181,7 @@
 							<nav>
 								<ul class="menu__list">
 									<li class="menu__item">
-										<a href="02 - 01 - Catalog_desktop.html" class="menu__link">Каталог</a>
+										<span class="menu__link js-menu">Каталог</span>
 									</li>
 									<li class="menu__item">
 										<a href="06 - 01 - About us_desktop.html" class="menu__link">De Dietrich</a>
@@ -193,10 +193,10 @@
 										<a href="06 - 03 - Service_desktop.html" class="menu__link">Сервис</a>
 									</li>
 									<li class="menu__item">
-										<a href="05 - 01 - Promotions and articles_desktop.html" class="menu__link">Гарантия</a>
+										<a href="06 - 04 - Promotions and articles_desktop.html" class="menu__link">Гарантия</a>
 									</li>
 									<li class="menu__item">
-										<a href="http://localhost:3000/05%20-%2001%20-%20Promotions%20and%20articles_desktop.html" class="menu__link">Статьи</a>
+										<a href="05 - 02 - Article_desktop.html" class="menu__link">Статьи</a>
 									</li>
 									<li class="menu__item">
 										<a href="06 - 05 - Help_desktop" class="menu__link">Помощь</a>
@@ -381,7 +381,7 @@
 							</div>
 							<div class="added-cart__button">
 								<a href="#" id="added-cart__back" class="added-cart__back js-modal-close">Продолжить покупки</a>
-								<a class="added-cart__order" href="#">Перейти к оформлению</a>
+								<a class="added-cart__order" href="03 - Order Form.html">Перейти к оформлению</a>
 								<br>
 							</div>
 						</div>
@@ -663,7 +663,14 @@
 											модели. Уточняйте подробную информацию о товаре в инструкции.
 										</span>
 									</div>
-									<div class="hide-tabs__delivery closed"></div>
+									<div class="hide-tabs__delivery closed">
+										<div class="product-card__description closed">
+											<span class="description__title">Описание!Тут будет текст</span>
+											<span class="description__text">Это электрический мультифункциональный духовой шкаф шириной 60 см. Есть режимы гриля и конвекции. Очистка традиционная, освещение галогенное. Модель оснащена дисплеем. Дверца имеет механизм плавного закрывания, внутри камеры установлены телескопические
+												направляющие, выдвигающиеся на 2/3 длины.</span>
+											<span class="description__title">текст дизайна нет</span>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="sidebar-right">
@@ -1108,7 +1115,7 @@
 							</div>
 							<div class="added-cart__button">
 								<a href="#" id="added-cart__back" class="added-cart__back js-modal-close">Продолжить покупки</a>
-								<a class="added-cart__order" href="#">Перейти к оформлению</a>
+								<a class="added-cart__order" href="03 - Order Form.html">Перейти к оформлению</a>
 								<br>
 							</div>
 						</div>
@@ -1231,9 +1238,6 @@
 								<div class="abuse-popup" id="js-abuse-response">
 									<a href="#" class="modal__close js-modal-close" title="Закрыть">×</a>
 									<form action="" method="post" id="js-abuse-form" class="abuse-popup__form" style="position:relative;">
-										<input type="hidden" name="ABUSE[SEND]" value="1">
-										<input type="hidden" name="action" value="ABUSE">
-										<input type="hidden" name="id" value="0">
 
 										<p class="abuse-popup__text">
 											Руководство интернет-магазина
@@ -1304,12 +1308,15 @@
 	<!-- /.footer -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src=""></script>
 	<script>
 		window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')
 	</script>
 
+
 	<script type="text/javascript" src="js/script.min.js"></script>
 	<script type="text/javascript" src="js/frontend-works.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
 
 	<script src="https://yastatic.net/browser-updater/v1/script.js" charset="utf-8"></script>
 	<script>

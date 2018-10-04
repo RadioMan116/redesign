@@ -232,20 +232,21 @@
     }
 
     &__buy {
+        @include button;
         font-family: "Gotham Pro Medium";
-        padding: 12px 56px;
-        height: 46px;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.71;
-        letter-spacing: normal;
-        text-align: left;
-        color: #ffffff;
-        border-radius: 2px;
-        background-color: #aa6e4f;
+        // padding: 12px 56px;
+        // height: 46px;
+        // text-transform: uppercase;
+        // font-size: 14px;
+        // font-weight: 500;
+        // font-style: normal;
+        // font-stretch: normal;
+        // line-height: 1.71;
+        // letter-spacing: normal;
+        // text-align: left;
+        // color: #ffffff;
+        // border-radius: 2px;
+        // background-color: #aa6e4f;
     }
 
     &__icons {

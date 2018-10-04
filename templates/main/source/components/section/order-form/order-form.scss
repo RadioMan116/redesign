@@ -440,6 +440,9 @@
             &__item {
                 flex-basis: unset !important;
                 width: 100%;
+                &.price {
+                    padding-left: 0 !important;
+                }
             }
 
             .special-offers__text,

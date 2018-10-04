@@ -372,9 +372,9 @@
     .special-offers__buy {
       padding: 0;
       color: transparent;
-      background: url("https://icongr.am/entypo/shopping-cart.svg?color=ffffff") #aa6e4f no-repeat;
+      background-image: url("https://icongr.am/entypo/shopping-cart.svg?color=ffffff");
       background-size: 18px;
-      background-position: center 3px;
+      background-position: center;
       width: unset;
     }
 
@@ -526,8 +526,8 @@
     }
 
     .special-offers__buy {
-      border-radius: 2px;
-      background: #aa6e4f;
+      background-image: none;
+      @include button;
       display: flex;
       align-items: center;
       font-size: 12px;

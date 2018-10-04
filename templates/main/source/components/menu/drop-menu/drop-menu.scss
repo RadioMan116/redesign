@@ -179,6 +179,12 @@
 	}
 }
 
+@media (max-width: 480px) {
+	.header__dropdown-menu {
+		height: 90%;
+	}
+}
+
 @media (max-width: 375px) {
 	.header__dropdown-menu .container {
 		padding: 22px 24px 24px;

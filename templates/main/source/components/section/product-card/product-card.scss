@@ -58,6 +58,7 @@
     .gallery-thumbs {
       box-sizing: border-box;
       padding: 10px 0;
+      height: 20%;
 
       .swiper-wrapper {
         // padding-left: 86px;
@@ -69,8 +70,14 @@
     .gallery-thumbs .swiper-slide {
       width: 25%;
       height: 100%;
+
       iframe {
-        max-height:113px;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      video {
+        z-index: -2;
       }
     }
 
@@ -84,6 +91,10 @@
       .swiper-slide {
         padding: 13%;
         position: relative;
+
+        iframe {
+
+        }
 
         img {
           height: 100%;
@@ -200,19 +211,20 @@
 
   &__buy {
     font-family: "Gotham Pro Medium";
-    padding: 12px 56px;
+    // padding: 12px 56px;
     height: 46px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.71;
-    letter-spacing: normal;
-    text-align: left;
-    color: #ffffff;
-    border-radius: 2px;
-    background-color: #aa6e4f;
+    // font-weight: 500;
+    // font-style: normal;
+    // font-stretch: normal;
+    // line-height: 1.71;
+    // letter-spacing: normal;
+    // text-align: left;
+    // color: #ffffff;
+    // border-radius: 2px;
+    // background-color: #aa6e4f;
+    @include button;
   }
 
   &__icons {
@@ -749,6 +761,12 @@
       position: relative;
       left: 0;
       margin: 0;
+
+      
+      .swiper-slide {
+        height: unset;
+      }
+
     }
 
     .gallery-thumbs {
@@ -757,10 +775,10 @@
       width: 17%;
       margin-left: auto;
       margin-right: 0;
+      height: unset;
 
       .swiper-slide {
         width: unset;
-       
       }
 
       .swiper-wrapper {
@@ -910,6 +928,9 @@
 
     .gallery-top {
       width: 100% !important;
+      .swiper-slide{
+        height: unset;
+      }
     }
 
     .swiper-pagination {

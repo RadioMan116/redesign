@@ -9,7 +9,7 @@
     .header__telephones {
       display: none;
       align-items: center;
-      
+
     }
   }
 
@@ -167,6 +167,54 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .menu {
+    margin-top: 60px;
+    transform: unset;
+    position: unset;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    transform: scale(1);
+    z-index: 10;
+    background-color: #262626;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .header__dropdown-menu {
+    position: absolute;
+  }
+
+  .header .header__icons,
+  .hamburger,
+  .logo {
+    position: absolute;
+    top: 18px;
+  }
+
+  .logo {
+    left: 13%;
+  }
+
+  .header .header__icons {
+    right: 24px;
+  }
+
+  .header__telephones {
+    background-color: #262626;
+    position: unset;
+    margin-bottom: 5%;
+    padding-bottom: 50px;
+  }
+
+
+
+
+  // .header .header__block_top {
+  //   height: unset;
+  // }
+}
+
 @media screen and (max-width: 375px) {
   .menu__compare-320 {
     display: flex !important;
@@ -196,8 +244,9 @@
     &:hover {
       background-color: #5a5a5a;
       color: #aa6e4f;
+
       i {
-        color:white;
+        color: white;
       }
     }
   }
@@ -221,6 +270,7 @@
     text-align: left;
     color: #eeeeee;
   }
+
   .dropdown-menu__back {
     font-family: 'Gotham Pro Medium' !important;
     font-size: 12px !important;

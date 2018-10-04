@@ -372,6 +372,33 @@
 			&__compare {
 				display: none;
 			}
+
+			&__block_top {
+				height: unset;
+
+				.container {
+					flex-wrap: wrap;
+
+				}
+			}
+		}
+
+		.header__button {
+			right: 9%;
+		}
+
+		.menu-480 {
+			.header__block.header__block_top {
+				height: 60px;
+			}
+
+			.menu.active .menu {
+				display: none;
+			}
+
+			.menu {
+				display: none;
+			}
 		}
 	}
 }
@@ -400,7 +427,8 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		input[type="text"],input[type='tel'] {
+		input[type="text"],
+		input[type='tel'] {
 			width: 100%;
 			border-radius: 2px;
 			background-color: #ffffff;
@@ -424,8 +452,9 @@
 			&:nth-child(2) {
 				margin-bottom: 21px;
 			}
+
 			@media screen and (max-width: 375px) {
-				&::placeholder{
+				&::placeholder {
 					opacity: 0;
 				}
 			}
@@ -459,8 +488,9 @@
 			text-align: left;
 			color: #2e2e2e;
 		}
+
 		.call-popup-phone-inner {
-			p{
+			p {
 				max-width: 288px;
 				text-align: left;
 				margin-bottom: 50px;

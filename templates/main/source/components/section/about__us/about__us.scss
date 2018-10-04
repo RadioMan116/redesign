@@ -22,52 +22,101 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: baseline;
-    align-items: baseline;
+    align-items: center;
     background-repeat: no-repeat;
     background-size: contain;
 
     &_first {
-      background: url('../images/about-us.png');
+      background: url("../images/about-us.png");
       background-size: 100% 100%;
     }
 
     &_two {
-      background: url('../images/about-us__2.png');
+      background: url("../images/about-us__2.png");
       background-size: 100% 100%;
     }
 
     &_three {
-      background: url('../images/about-us__3.png');
+      background: url("../images/about-us__3.png");
       background-size: 100% 100%;
+      .gerb__1 {
+        position: absolute;
+        margin: 0 auto;
+        background: white;
+        padding: 2% 1.1%;
+        width: 5.5%;
+        box-sizing: content-box;
+        height: 50%;
+        display: flex;
+        align-items: center;
+
+        &_right {
+          right: 1.15%;
+        }
+        &_left {
+          left: 1.15%;
+        }
+      }
     }
 
     &_four {
-      background: url('../images/about-us__4.png');
+      background: url("../images/about-us__4.png");
       background-size: 100% 100%;
+      .gerb__2 {
+        position: absolute;
+        margin: 0 auto;
+        background: white;
+        padding: 2% 1.1%;
+        width: 5.5%;
+        box-sizing: content-box;
+        height: 50%;
+        display: flex;
+        align-items: center;
+
+        &_right {
+          right: 1.15%;
+        }
+        &_left {
+          left: 1.15%;
+        }
+      }
     }
 
     &_five {
-      background: url('../images/about-us__5.png');
+      background: url("../images/about-us__5.png");
       background-size: 100% 100%;
+      .gerb__3 {
+        position: absolute;
+        top: 8%;
+        background: white;
+        padding: 1% 1.1% 2%;
+        width: 5.5%;
+        box-sizing: content-box;
+        height: 50%;
+        display: flex;
+        align-items: baseline;
+        &_right {
+          right: 1.17%;
+        }
+        &_left {
+          left: 1.17%;
+        }
+      }
     }
 
     &_six {
-      background: url('../images/about-us__6.png');
+      background: url("../images/about-us__6.png");
       background-size: 100% 100%;
     }
 
     &_seven {
-      background: url('../images/about-us__7.png');
+      background: url("../images/about-us__7.png");
       background-size: 100% 100%;
     }
 
     &_eight {
-      background: url('../images/about-us__8.png');
+      background: url("../images/about-us__8.png");
       background-size: 100% 100%;
-    }
-
-    img {
-      opacity: 0;
     }
 
     &-absolute {
@@ -78,6 +127,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        opacity: 0;
       }
 
       span,
@@ -175,7 +225,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #262626;
-    font-family: 'Gotham Pro';
+    font-family: "Gotham Pro";
 
     &::before {
       content: "⯁";
@@ -210,23 +260,26 @@
 
     &__item {
       &_two {
-        background: url('../images/about-us_768_2.png');
+        background: url("../images/about-us_768_2.png");
         background-size: 100% 100%;
       }
 
       &_three {
-        background: url('../images/about-us_768_3.png');
+        background: url("../images/about-us_768_3.png");
         background-size: 100% 100%;
       }
 
       &_four {
-        background: url('../images/about-us_768_4.png');
+        background: url("../images/about-us_768_4.png");
         background-size: 100% 100%;
       }
 
       &_five {
-        background: url('../images/about-us_768_5.png');
+        background: url("../images/about-us_768_5.png");
         background-size: 100% 100%;
+        .gerb__3 {
+          top: 5%;
+        }
       }
     }
 
@@ -281,26 +334,28 @@
   }
 
   @media screen and (max-width: 480px) {
-
     &__item {
       &_two {
-        background: url('../images/about-us_480_1.png');
-        background-size: 100% ;
+        background: url("../images/about-us_480_1.png");
+        background-size: 100%;
       }
 
       &_three {
-        background: url('../images/about-us_480_2.png');
+        background: url("../images/about-us_480_2.png");
         background-size: 100% 100%;
       }
 
       &_four {
-        background: url('../images/about-us_480_3.png');
+        background: url("../images/about-us_480_3.png");
         background-size: 100% 100%;
       }
 
       &_five {
-        background: url('../images/about-us_480_4.png');
+        background: url("../images/about-us_480_4.png");
         background-size: 100% 100%;
+        .gerb__3 {
+          top: 1.9%;
+        }
       }
     }
 

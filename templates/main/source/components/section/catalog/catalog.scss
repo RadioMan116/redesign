@@ -581,11 +581,9 @@
     line-height: 2;
     letter-spacing: normal;
     text-align: left;
-    color: #ffffff;
-    padding: 7px 24px;
-    border-radius: 2px;
-    background-color: #aa6e4f;
-    text-transform: uppercase;
+    @include button;
+
+
   }
 
   &__section {
@@ -731,6 +729,7 @@
       &__col_date {
         margin-left: auto;
       }
+
       &__item {
         padding: 15px 0;
       }

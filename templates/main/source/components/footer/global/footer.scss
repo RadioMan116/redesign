@@ -128,9 +128,11 @@
 		* {
 			transition: 0.3s;
 		}
-		.menu-footer__list-margin .menu-footer__title{
+
+		.menu-footer__list-margin .menu-footer__title {
 			margin-top: 0 !important;
 		}
+
 		&__col {
 			width: 100% !important;
 			margin-bottom: 0 !important;
@@ -262,7 +264,7 @@
 
 .abuse-popup-container {
 	// height: 100vh;
-	overflow-y: scroll;
+	// overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -443,8 +445,6 @@ label {
 		&__submit {
 			width: 175px;
 			height: 46px;
-			border-radius: 2px;
-			background-color: #aa6e4f;
 			font-size: 14px;
 			font-weight: 500;
 			font-style: normal;
@@ -453,6 +453,7 @@ label {
 			letter-spacing: normal;
 			color: #ffffff;
 			text-transform: uppercase;
+			@include button
 		}
 
 		.modal__close {

@@ -27,7 +27,7 @@
         letter-spacing: normal;
         text-align: left;
         color: #2e2e2e;
-        margin-left: -5px;
+       
     }
 
     &__item {
@@ -44,9 +44,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+   
     &:hover {
         box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.14);
+    }
+    &__pic{
+        width: auto;
     }
 
     &__link {
