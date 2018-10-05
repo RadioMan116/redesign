@@ -1,32 +1,30 @@
 //Доступный hamburger https://foxland.fi/simple-accessible-svg-menu-hamburger-animation
 
 $(document).ready(function () {
-  var windowWidth2 = $(window).width();
-  if (windowWidth2 > 480) {
-    function hamburger(element, menu) {
-      var button = document.getElementById(element),
-        menu = document.getElementById(menu);
-      button.onclick = function () {
-        // Toggle class "opened". Set also aria-expanded to true or false.
-        if (-1 !== button.className.indexOf("opened")) {
-          button.className = button.className.replace(" opened", "");
-          button.setAttribute("aria-expanded", "false");
-          menu.className = menu.className.replace(" active", "");
-          menu.setAttribute("aria-expanded", "false");
-          $("html").removeClass("fixed");
-          $(".header__dropdown-menu ").hide();
-          $(".header__overlay").hide();
-        } else {
-          button.className += " opened";
-          button.setAttribute("aria-expanded", "true");
-          menu.className += " active";
-          menu.setAttribute("aria-expanded", "true");
-          $("html").addClass("fixed");
-        }
-      };
-    }
+  function hamburger(element, menu) {
+    var button = document.getElementById(element),
+      menu = document.getElementById(menu);
+    button.onclick = function () {
+      // Toggle class "opened". Set also aria-expanded to true or false.
+      if (-1 !== button.className.indexOf("opened")) {
+        button.className = button.className.replace(" opened", "");
+        button.setAttribute("aria-expanded", "false");
+        menu.className = menu.className.replace(" active", "");
+        menu.setAttribute("aria-expanded", "false");
+        $("html").removeClass("fixed");
+        $(".header__dropdown-menu ").hide();
+        $(".header__overlay").hide();
+      } else {
+        button.className += " opened";
+        button.setAttribute("aria-expanded", "true");
+        menu.className += " active";
+        menu.setAttribute("aria-expanded", "true");
+        $("html").addClass("fixed");
+      }
+    };
   }
 
+  var windowWidth2 = $(window).width();
   var mySwiper = new Swiper(".swiper-container-main", {
     // Optional parameters
     direction: "horizontal",
@@ -250,6 +248,7 @@ $(document).ready(function () {
     $(".header__dropdown-menu ").hide();
     return false;
   });
+
   $(".header__block_bottom .menu__item").first().click(function (event) {
     if ($(".header__dropdown-menu").css("display") == "none") {
       $(".header__dropdown-menu").show();
@@ -259,18 +258,21 @@ $(document).ready(function () {
       $(".header__overlay").hide();
     }
   });
-  $(".header__block_top .menu__item")
-    .first()
-    .click(function (event) {
-      if ($(".header__dropdown-menu").css("display") == "none") {
-        $(".header__dropdown-menu").show();
-        // $(".header__overlay").show();
-      } else {
-        $(".header__dropdown-menu").hide();
-        // $(".header__overlay").hide();
-        $("html").removeClass("fixed");
-      }
-    });
+  if (windowWidth2 > 480) {
+    $(".header__block_top .menu__item")
+      .first()
+      .click(function (event) {
+        if ($(".header__dropdown-menu").css("display") == "none") {
+          $(".header__dropdown-menu").show();
+          // $(".header__overlay").show();
+        } else {
+          $(".header__dropdown-menu").hide();
+          // $(".header__overlay").hide();
+          $("html").removeClass("fixed");
+        }
+      });
+  }
+
   $(".dropdown-menu__title").click(function (event) {
     if (
       $(this)
@@ -343,8 +345,10 @@ $(document).ready(function () {
   });
 
   if (windowWidth2 <= 480) {
-    $("#js-hamburger").click(function (event) {
-      $(".header__blocks").toggleClass("menu-480");
+    $('.header__dropdown-menu:eq(-1)').remove();
+    $('.dropdown-menu__first').addClass('active');
+    $(".menu__link").click(function () {
+      $(this).parent().toggleClass("menu-480");
       // $(".menu").toggleClass("menu-480");
     });
   }
@@ -567,7 +571,7 @@ $(document).ready(function () {
     }
   });
 
- 
+
   $('.filter__slider').draggable();
   hamburger("js-hamburger", "js-menu");
 });

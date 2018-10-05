@@ -154,7 +154,7 @@
         border-bottom: 1px solid #494949;
       }
 
-      &:hover {
+      span:hover,a:hover {
         background-color: #5a5a5a;
       }
     }
@@ -169,17 +169,11 @@
 
 @media screen and (max-width: 480px) {
   .menu {
-    margin-top: 60px;
-    transform: unset;
-    position: unset;
     width: 100%;
     height: 100%;
     transition: transform 0.3s;
-    transform: scale(1);
     z-index: 10;
     background-color: #262626;
-    margin-left: -24px;
-    margin-right: -24px;
   }
   .header__dropdown-menu {
     position: absolute;
