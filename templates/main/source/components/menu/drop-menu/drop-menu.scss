@@ -180,6 +180,10 @@
 }
 
 @media (max-width: 480px) {
+	.menu.active{
+		height: 100vh;
+		overflow-y: scroll;
+	}
 	.header__dropdown-menu {
 		height: 90%;
 		display: flex !important;
